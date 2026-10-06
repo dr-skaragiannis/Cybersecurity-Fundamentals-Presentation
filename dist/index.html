@@ -29,6 +29,78 @@
     .qa ol { color: #dbe5fb; padding-left: 26px; line-height: 1.6; }
     .qa li { margin-bottom: 15px; padding-left: 6px; }
     .qa small { color: #98abc9; display: block; margin-top: 5px; }
+    .qa a { color: #67e8f9; }
+    .qa .qa-example { padding: 19px 0 23px; border-bottom: 1px solid #ffffff1b; }
+    .qa .qa-example h3 { color: #fff; margin: 0 0 8px; font-size: 17px; }
+    .qa .qa-example pre { background: #040e18; color: #baf7de; padding: 15px; border-radius: 8px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+    .qa .qa-detail { margin: 8px 0; padding-left: 15px; border-left: 2px solid #67e8f9; color: #dbe5fb; line-height: 1.55; }
+    .qa .qa-detail strong { color: #a5f3fc; }
+    body.output-page { min-height: 100%; height: auto; background: radial-gradient(ellipse 860px 500px at 82% -10%, #15536b38, transparent 75%), #07111e; }
+    html, body.output-page, .qa-output pre { scrollbar-color: #3199a6 #101e2c; scrollbar-width: thin; }
+    html::-webkit-scrollbar, body.output-page::-webkit-scrollbar, .qa-output pre::-webkit-scrollbar { width: 10px; height: 10px; }
+    html::-webkit-scrollbar-track, body.output-page::-webkit-scrollbar-track, .qa-output pre::-webkit-scrollbar-track { background: #101e2c; }
+    html::-webkit-scrollbar-thumb, body.output-page::-webkit-scrollbar-thumb, .qa-output pre::-webkit-scrollbar-thumb { background: #3199a6; border: 2px solid #101e2c; border-radius: 20px; }
+    .qa.qa-output { max-width: 1120px; padding: clamp(36px, 6vw, 78px) clamp(20px, 5vw, 56px) 130px; }
+    .qa-output .qa-masthead { max-width: 740px; padding-bottom: 54px; }
+    .qa-output h1 { font-size: clamp(38px, 5vw, 68px); letter-spacing: -.052em; line-height: 1.06; margin: 17px 0 19px; }
+    .qa-output .qa-masthead p { color: #afc1d5; font-size: 17px; line-height: 1.65; margin: 0; }
+    .qa-output .qa-return { display: inline-block; margin-top: 26px; color: #72dfec; text-decoration: none; font-size: 14px; font-weight: 700; }
+    .qa-output .qa-return:hover { text-decoration: underline; }
+    .qa-output a:focus-visible, .qa-output summary:focus-visible { outline: 2px solid #67e8f9; outline-offset: 4px; }
+    .qa-output .qa-chapter { border-top: 1px solid #ffffff36; }
+    .qa-output .qa-chapter:last-child { border-bottom: 1px solid #ffffff36; }
+    .qa-output .qa-chapter > summary { list-style: none; display: grid; grid-template-columns: 62px minmax(0, 1fr) auto 24px;
+      align-items: center; gap: 20px; padding: 26px 0; border: 0; margin: 0; line-height: 1.3; }
+    .qa-output .qa-chapter > summary::-webkit-details-marker { display: none; }
+    .qa-output .qa-chapter > summary:hover .qa-summary-title { color: #a5f3fc; }
+    .qa-output .qa-chapter[open] > summary { border-bottom: 1px solid #ffffff26; }
+    .qa-output .qa-summary-number { color: #67e8f9; font: 700 18px/1.2 ui-monospace, Consolas, monospace; }
+    .qa-output .qa-summary-title { color: #fff; font-size: clamp(17px, 2vw, 22px); font-weight: 730; transition: color .2s; }
+    .qa-output .qa-summary-count { color: #99b0c8; font: 600 13px/1.2 ui-monospace, Consolas, monospace; white-space: nowrap; }
+    .qa-output .qa-summary-caret { color: #67e8f9; font-size: 23px; line-height: 1; text-align: right; transition: transform .25s; }
+    .qa-output .qa-chapter[open] .qa-summary-caret { transform: rotate(45deg); }
+    .qa-output .qa-chapter-content { padding: 32px 0 52px 82px; }
+    .qa-output .qa-section-title { color: #84e4ef; font-size: 13px; font-weight: 800; letter-spacing: .11em;
+      text-transform: uppercase; margin: 0 0 17px; }
+    .qa-output .qa-task-list { list-style: none; padding: 0; margin: 0 0 49px; border-top: 1px solid #ffffff26; }
+    .qa-output .qa-task-list li { padding: 0; margin: 0; border-bottom: 1px solid #ffffff26; }
+    .qa-output .qa-task-link { display: grid; grid-template-columns: 90px minmax(0, 1fr) 18px; align-items: center;
+      gap: 18px; padding: 15px 8px 15px 0; color: #e8f1fa; text-decoration: none; transition: background .2s, padding-left .2s; }
+    .qa-output .qa-task-link:hover { background: #ffffff0c; padding-left: 8px; }
+    .qa-output .qa-task-number { color: #67e8f9; font: 800 13px/1.4 ui-monospace, Consolas, monospace; }
+    .qa-output .qa-task-title { color: #e7f2fc; font-size: 16px; font-weight: 650; line-height: 1.4; }
+    .qa-output .qa-task-arrow { color: #67e8f9; font-size: 20px; text-align: right; }
+    .qa-output .qa-example { padding: 30px clamp(20px, 3vw, 34px) 37px; margin: 0 0 24px;
+      border-top: 1px solid #ffffff26; border-bottom: 1px solid #ffffff26;
+      border-left: 3px solid #3199a6; background: linear-gradient(90deg, #22d3ee0d, #ffffff05 72%);
+      scroll-margin-top: 24px; }
+    .qa-output .qa-example:nth-of-type(even) { border-left-color: #34d399; background: linear-gradient(90deg, #34d3990c, #ffffff04 72%); }
+    .qa-output .qa-example:last-child { margin-bottom: 0; }
+    .qa-output .qa-example-label { display: block; color: #67e8f9; font: 800 12px/1.4 ui-monospace, Consolas, monospace; letter-spacing: .06em; margin-bottom: 8px; }
+    .qa-output .qa-example h3 { color: #fff; font-size: 22px; line-height: 1.3; margin: 0 0 13px; }
+    .qa-output .qa-example > p { color: #aec1d7; font-size: 15px; line-height: 1.65; margin: 0 0 19px; }
+    .qa-output .qa-code-label { color: #7ddae5; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin: 23px 0 9px; }
+    .qa-output .qa-example pre { margin: 0; padding: 17px 19px; font: 13px/1.65 "Noto Sans Mono", Consolas, monospace; border-radius: 8px; }
+    .qa-output .qa-example pre.qa-command { background: #060e1a; color: #dcebf6; border: 1px solid #ffffff29; }
+    .qa-output .qa-example pre.qa-response { background: #09221d; color: #c8f3dd; border: 1px solid #36c99355; border-left: 3px solid #36c993; }
+    .qa-output .qa-example .qa-explanation { color: #e0ebf7; margin: 15px 0 23px; }
+    .qa-output .qa-step { padding-top: 20px; margin-top: 28px; border-top: 1px solid #ffffff27; }
+    .qa-output .qa-step:first-of-type { border-top: 0; }
+    .qa-output .qa-example .qa-field-title { margin: 26px 0 12px; color: #7ddae5; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .qa-output .qa-field-list { display: grid; gap: 14px; margin: 0; }
+    .qa-output .qa-field-list > div { border-left: 2px solid #3199a6; padding-left: 14px; }
+    .qa-output .qa-field-list dt { color: #c3edf3; font: 650 13px/1.5 "Noto Sans Mono", Consolas, monospace; overflow-wrap: anywhere; }
+    .qa-output .qa-field-list dd { margin: 4px 0 0; color: #b9cde0; font-size: 14px; line-height: 1.6; }
+    @media (max-width: 640px) {
+      .qa-output .qa-chapter > summary { grid-template-columns: 36px minmax(0, 1fr) 18px; gap: 10px; padding: 23px 0; }
+      .qa-output .qa-summary-count { display: none; }
+      .qa-output .qa-chapter-content { padding: 24px 0 40px; }
+      .qa-output .qa-task-link { grid-template-columns: 69px minmax(0, 1fr) 16px; gap: 9px; }
+      .qa-output .qa-example { padding: 24px 18px 30px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .qa-output .qa-summary-caret, .qa-output .qa-summary-title, .qa-output .qa-task-link { transition: none; }
+    }
     @keyframes sweep { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
     @media (prefers-reduced-motion: reduce) { .progress::after { animation: none; width: 100%; } }
   </style>
@@ -43,12 +115,14 @@
       <p id="status">Σύνδεση με το υλικό...</p>
       <a id="source-link" href="https://github.com/dr-skaragiannis/Cybersecurity-Fundamentals-Presentation/tree/main/dist" target="_blank" rel="noopener noreferrer">Προβολή αρχικού υλικού</a>
       <a id="audit-link" href="?audit=1">Προβολή ελεγμένων ερωτήσεων</a>
+      <a id="output-link" href="?outputs=1">Προβολή αποτελεσμάτων εντολών</a>
     </div>
   </main>
   <script>
     const status = document.getElementById('status');
     const sourceLink = document.getElementById('source-link');
     const auditLink = document.getElementById('audit-link');
+    const outputLink = document.getElementById('output-link');
     const revision = '1dca1dafcbd13f505fd6eb3626f0e9257aacd0d9';
     const repository = 'dr-skaragiannis/Cybersecurity-Fundamentals-Presentation';
     const sources = [
@@ -332,6 +406,1250 @@
       });
     }
 
+    const commandStart = /^(?:\$\s*|#\s*)?(?:sudo\s+)?(?:ls|stat|chmod|chown|id|whoami|groups|umask|getfacl|setfacl|icacls|ps|ss|netstat|ip|ifconfig|ping|traceroute|tracepath|dig|nslookup|host|curl|wget|nmap|tcpdump|tshark|openssl|sha256sum|sha1sum|sha512sum|shasum|md5sum|hashdeep|gpg|base64|grep|rg|find|findstr|awk|sed|sort|uniq|wc|head|tail|cat|file|strings|xxd|hexdump|exiftool|binwalk|yara|clamscan|volatility|vol|journalctl|systemctl|auditctl|ausearch|ufw|iptables|iptables-save|nft|firewall-cmd|docker|kubectl|git|python3?|node|bash|sh|pwsh|powershell|sqlmap|nikto|testssl\.sh|ssh|ssh-keygen|whois|nc|netcat|ncat|socat|getent|last|lastb|hostname|hostnamectl|net|netsh|certutil|wevtutil|tasklist|schtasks|auditpol|sc\.exe|[A-Za-z]+-[\w-]+|SELECT|SHOW|DESCRIBE|echo|printf|date|uname|lsof|mount|df|du|tar|unzip|jq)(?:\s|$|[|;&])/i;
+
+    function buildExampleCatalog(chapters) {
+      const inline = (text, ci, label, context, target) => {
+        for (const match of (text || '').matchAll(/`([^`\n]+)`/g)) {
+          const normalized = match[1].trim().replace(/^\$\s*/, '');
+          const repeated = target.some(item => (item.type === 'cli' || item.title === label) &&
+            item.cmd.split(/\r?\n/).some(line => line.trim()
+              .replace(/^[\w.-]+@[\w.-]+(?::[^\s$#]*)?[$#]\s*/, '')
+              .replace(/^\$\s*/, '') === normalized));
+          if (commandStart.test(match[1].trim()) && !repeated) {
+            target.push({ id: `c${ci}-inline-${target.length}`, type: 'inline',
+              title: label, cmd: match[1], context, meaning: context });
+          }
+        }
+      };
+      return chapters.map((chapter, ci) => {
+        const examples = [];
+        (chapter.cli?.tasks || []).forEach((task, ti) => {
+          if (!task.cmd?.trim()) throw new Error(`Λείπει εντολή στο κεφάλαιο ${ci + 1}, task ${ti + 1}.`);
+          examples.push({ id: `c${ci}-cli-${ti}`, type: 'cli',
+            taskNumber: ti + 1, title: task.name || chapter.cli.title,
+            cmd: task.cmd, context: task.instr || task.name, meaning: task.ok || task.instr, hint: task.hint || '' });
+        });
+        (chapter.lab?.phases || []).forEach((phase, pi) => {
+          (phase.objs || []).forEach(objective => inline(objective, ci, phase.name, objective, examples));
+          phase.steps.forEach((step, si) => {
+            if (step.type === 'code' && step.text?.trim()) {
+              const neighbor = [...phase.steps.slice(0, si)].reverse().find(item => item.type === 'p');
+              examples.push({ id: `c${ci}-lab-${pi}-${si}`, type: 'lab',
+                title: `${phase.name}, βήμα ${si + 1}`, cmd: step.text.trim(),
+                context: neighbor?.text || phase.objs?.join(' ') || phase.name,
+                meaning: phase.objs?.join(' ') || phase.name });
+            } else if (step.type === 'p') {
+              inline(step.text, ci, phase.name, step.text, examples);
+            } else if (step.type === 'ul') {
+              (step.items || []).forEach(item => inline(item, ci, phase.name, item, examples));
+            } else if (step.type === 'table') {
+              (step.rows || []).flat().forEach(cell => inline(cell, ci, phase.name, cell, examples));
+            }
+          });
+        });
+        (chapter.lab?.env || []).forEach(item => inline(item, ci, chapter.lab.title, item, examples));
+        (chapter.sections || []).forEach(section => {
+          section.blocks.forEach((block, bi) => {
+            if (block.type === 'code' && block.text?.trim()) {
+              examples.push({ id: `c${ci}-${section.id}-${bi}`, type: 'theory',
+                title: `${section.id} ${section.title}`, cmd: block.text.trim(),
+                context: section.title, meaning: section.title });
+            } else if (block.type === 'p' || block.type === 'callout') {
+              inline(block.text, ci, `${section.id} ${section.title}`, block.text, examples);
+            } else if (block.type === 'table') {
+              (block.rows || []).flat().forEach(cell =>
+                inline(cell, ci, `${section.id} ${section.title}`, cell, examples));
+            }
+          });
+        });
+        (chapter.projects || []).forEach(project => {
+          inline(project.desc, ci, project.title, project.desc, examples);
+          [...(project.env || []), ...(project.deliverables || [])].forEach(item =>
+            inline(item, ci, project.title, item, examples));
+          project.milestones.forEach(milestone => {
+            (milestone.spec || []).forEach(spec =>
+              inline(spec, ci, `${project.title}, ${milestone.title}`, spec, examples));
+          });
+        });
+        return {
+          title: chapter.title,
+          topic: topics[ci],
+          examples: examples.map(example => ({
+            ...example, chapterNumber: ci + 1, topic: topics[ci], lesson: lessonForExample(example)
+          }))
+        };
+      });
+    }
+
+    function lessonForExample(example) {
+      const text = (example.context || example.meaning || example.title)
+        .replace(/\*\*|`|<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+      const sentences = text.split(/(?<=[.!;?])\s+/);
+      const relevant = sentences.find(sentence =>
+        example.type === 'inline' && sentence.includes(example.cmd)) || sentences[0] || text;
+      const goal = relevant.length > 185
+        ? relevant.slice(0, 185).replace(/\s+\S*$/, '') + '…'
+        : relevant.replace(/[.!;?]+$/, '');
+      if (example.type === 'cli') return `${goal}${goal.endsWith('…') ? '' : '.'}`;
+      const code = example.cmd.toLowerCase();
+      const guidance = /sha\d*sum|shasum|md5sum|digest|Get-FileHash/i.test(code)
+        ? 'Συγκρίνετε το αποτύπωμα με μια γνωστή τιμή και εντοπίστε τι σημαίνει η διαφορά.'
+        : /openssl|gpg|base64/i.test(code)
+          ? 'Σημειώστε ποιο κλειδί, πιστοποιητικό ή μετασχηματισμός χρησιμοποιείται και πώς ελέγχεται.'
+          : /nmap|nikto|sqlmap|dig|nslookup|host|ping|traceroute|curl|wget|ss\b|tcpdump|tshark|ip\s/i.test(code)
+            ? 'Παρατηρήστε τον στόχο, τα πεδία της απόκρισης και ποιο συμπέρασμα επιτρέπουν.'
+            : /chmod|chown|setfacl|getfacl|icacls|ufw|iptables|nft|firewall-cmd/i.test(code)
+              ? 'Εντοπίστε ποιο δικαίωμα ή κανόνας μεταβάλλεται και με ποιον έλεγχο επιβεβαιώνεται.'
+              : /journalctl|ausearch|grep|rg\b|yara|volatility|vol\s|strings|exiftool/i.test(code)
+                ? 'Συσχετίστε το εύρημα με το αρχείο, τον χρόνο και το υπόλοιπο πλαίσιο της διερεύνησης.'
+                : 'Εξετάστε την έξοδο ή την κατάσταση ολοκλήρωσης σε σχέση με τον στόχο του παραδείγματος.';
+      return `Μαθησιακός στόχος: ${goal}${goal.endsWith('…') ? '' : '.'} ${guidance}`;
+    }
+
+    function simulateCommand(raw, example, commandPattern = commandStart) {
+      const commands = raw.split(/\r?\n/).flatMap(sourceLine => sourceLine.trim()
+        .replace(/^[\w.-]+@[\w.-]+(?::[^\s$#]*)?[$#]\s*/, '$ ')
+        .replace(/^PS\s+[^>]*>\s*/i, '$ ')
+        .split(/\s+&&\s+/)
+        .map(command => ({ command, sourceLine: sourceLine.trim() })))
+        .filter(({ command }) => commandPattern.test(command) || /^(?:\$\s*)?\.\/[\w./-]+/.test(command) ||
+          /^\$\s*[a-z][\w.+-]*(?:\s|$)/i.test(command));
+      const steps = commands.length ? commands : [{ command: raw.trim(), sourceLine: raw.trim() }];
+      // Keep transcripts consistent using the same five-byte "Hello" fixture and reserved lab addresses.
+      const digest = {
+        md5: '8b1a9953c4611296a827abf8c47804d7',
+        sha1: 'f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0',
+        sha256: '185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969',
+        sha512: '3615f80c9d293ed7402687f94b22d58e529b8cc7916f8fac7fddf7fbd5af4cf777d3d795a7a00a16bf7e7f3fb9561ee9baae480da9fe7a18769e71886b03f315'
+      };
+      const response = (output, explanation) => {
+        const localized = typeof output === 'string' && /[\u0370-\u03ff]/u.test(output);
+        return {
+          output: localized ? null : output,
+          explanation: localized
+            ? `${explanation} Δεν κατασκευάζουμε έξοδο από διαφορετική εντολή για αυτό το παράδειγμα.`
+            : explanation
+        };
+      };
+      const noStdout = null;
+
+      function describeInvocation(command, example) {
+        const tool = command.match(/^[\w.+-]+/)?.[0] || 'απόσπασμα';
+        const descriptions = [
+          [/^id\b/i, 'Το id εμφανίζει αριθμητική ταυτότητα χρήστη (UID), πρωτεύουσα ομάδα (GID) και συμπληρωματικές ομάδες.'],
+          [/^(?:ls|stat|file|find)\b/i, 'Το εργαλείο εξετάζει αρχεία: θέση, τύπο, ιδιοκτησία και δικαιώματα.'],
+          [/^(?:chmod|chown|setfacl|getfacl|icacls|umask)\b/i, 'Η εντολή σχετίζεται με δικαιώματα ή ιδιοκτησία αρχείου.'],
+          [/^(?:sha\d+sum|shasum|md5sum|hashdeep|Get-FileHash)\b/i, 'Υπολογίζει ή ελέγχει αποτύπωμα bytes. Ίδιο hash από έμπιστη πηγή επιτρέπει σύγκριση ακεραιότητας.'],
+          [/^openssl\b/i, 'Το OpenSSL χειρίζεται κλειδιά, πιστοποιητικά, hashes ή ασφαλείς συνδέσεις, ανάλογα με την υποεντολή.'],
+          [/^(?:gpg|ssh-keygen|base64)\b/i, 'Το πρόγραμμα χειρίζεται κλειδιά, υπογραφές ή κωδικοποίηση δεδομένων, ανάλογα με την υποεντολή.'],
+          [/^(?:curl|wget|Invoke-WebRequest|Invoke-RestMethod)\b/i, 'Στέλνει HTTP αίτημα ή λαμβάνει δεδομένα από το δηλωμένο endpoint.'],
+          [/^(?:nmap|nikto|sqlmap)\b/i, 'Ελέγχει υπηρεσίες ή εφαρμογή στον ρητά επιτρεπόμενο εργαστηριακό στόχο.'],
+          [/^(?:dig|nslookup|host|whois)\b/i, 'Αναζητά καταχωρίσεις ονόματος ή δημόσιες πληροφορίες domain.'],
+          [/^(?:ping|traceroute|tracepath|nc|ncat|netcat)\b/i, 'Ελέγχει προσπελασιμότητα ή διαδρομή προς τον στόχο.'],
+          [/^(?:ip|ifconfig|ss|netstat|lsof|tcpdump|tshark)\b/i, 'Εξετάζει διεπαφές, θύρες, συνδέσεις ή πακέτα δικτύου.'],
+          [/^(?:grep|rg|findstr|awk|sed|sort|uniq|wc|head|tail|cat|jq)\b/i, 'Διαβάζει ή φιλτράρει τα δεδομένα εισόδου. Η έξοδος πρέπει να ερμηνευτεί στο αρχικό πλαίσιο του αρχείου.'],
+          [/^(?:journalctl|ausearch|auditctl|ps|systemctl)\b/i, 'Εξετάζει ή μεταβάλλει υπηρεσίες, διεργασίες και καταγραφές συστήματος.'],
+          [/^(?:ufw|iptables|nft|firewall-cmd|netsh)\b/i, 'Εξετάζει ή αλλάζει κανόνες τείχους προστασίας και πρόσβαση δικτύου.'],
+          [/^(?:vol|volatility|yara|clamscan|exiftool|strings|xxd|hexdump|binwalk)\b/i, 'Αναλύει περιεχόμενο, μεταδεδομένα ή ίχνη του εργαστηριακού δείγματος.'],
+          [/^(?:SELECT|SHOW|DESCRIBE)\b/i, 'Εκτελεί ερώτημα στα δεδομένα της βάσης με τα δικαιώματα του τρέχοντος λογαριασμού.'],
+          [/^(?:Get-|Set-|New-|Test-|pwsh|powershell)\b/i, 'Το PowerShell επιστρέφει ή αλλάζει αντικείμενα και ιδιότητες των Windows.'],
+          [/^(?:git|docker|kubectl)\b/i, 'Χειρίζεται αντίστοιχα αποθετήριο, containers ή πόρους Kubernetes.'],
+          [/^(?:python3?|node|bash|sh)\b/i, 'Εκκινεί script στο επιλεγμένο runtime. Η ορατή συμπεριφορά καθορίζεται από τον κώδικα και τα δεδομένα εισόδου.'],
+          [/^(?:echo|printf)\b/i, 'Γράφει κείμενο/bytes στη στάνταρ έξοδο ή στο δηλωμένο αρχείο μέσω ανακατεύθυνσης.']
+        ];
+        const purpose = descriptions.find(([pattern]) => pattern.test(command))?.[1] ||
+          `Το ${tool} είναι το πρόγραμμα που καλείται από τη γραμμή εντολών.`;
+        const options = [
+          [/^id\b.*\s-u(?:\s|$)/i, 'Το -u εμφανίζει μόνο UID, όχι επίπεδο προνομίου.'],
+          [/^id\b.*\s-g(?:\s|$)/i, 'Το -g εμφανίζει μόνο τον πρωτεύοντα GID.'],
+          [/^ls\b.*\s-[a-z]*l/i, 'Το -l ζητά αναλυτική λίστα με mode, ιδιοκτήτη, ομάδα και μέγεθος.'],
+          [/^stat\b.*\s-c\s/i, 'Το -c διαμορφώνει την έξοδο: %a είναι οκταδικό mode, %U/%G ονόματα ιδιοκτήτη/ομάδας και %n όνομα αρχείου.'],
+          [/^wc\b.*\s-c\b/i, 'Το -c μετρά bytes, όχι χαρακτήρες Unicode ή γραμμές.'],
+          [/^chmod\b.*\b[0-7]{3,4}\b/i, 'Το τριψήφιο οκταδικό mode είναι άθροισμα r=4, w=2, x=1 για owner/group/others.'],
+          [/^(?:sha\d+sum|shasum|md5sum)\b.*(?:\s-c\b|--check\b)/i, 'Το -c ή --check συγκρίνει ένα αρχείο checksums με τα τρέχοντα bytes.'],
+          [/^openssl\s+rand\s+-hex\s+\d+/i, 'Το rand -hex N ζητά N bytes ως 2N δεκαεξαδικούς χαρακτήρες.'],
+          [/^openssl\s+rand\s+-base64\s+\d+/i, 'Το rand -base64 N ζητά N bytes σε εκτυπώσιμη κωδικοποίηση.'],
+          [/^nmap\b.*\s-p\s*\d+/i, 'Το -p περιορίζει τον έλεγχο στις δηλωμένες θύρες.'],
+          [/^nmap\b.*\s-sV\b/i, 'Το -sV επιχειρεί αναγνώριση υπηρεσίας και έκδοσης.'],
+          [/^curl\b.*(?:\s-I(?:\s|$)|--head\b)/i, 'Το -I ή --head ζητά μόνο HTTP headers.'],
+          [/^curl\b.*(?:\s-i(?:\s|$)|--include\b)/i, 'Το -i εμφανίζει headers μαζί με το σώμα HTTP.'],
+          [/^curl\b.*(?:\s-X\s*\w+|--request\s+\w+)/i, 'Το -X/--request καθορίζει τη μέθοδο HTTP.'],
+          [/^curl\b.*(?:\s-d\s+|--data\s+)/i, 'Το -d/--data στέλνει σώμα δεδομένων, συνήθως με μέθοδο POST.'],
+          [/^(?:curl|wget)\b.*(?:\s-o\s+|--output\s+)/i, 'Το -o/--output αποθηκεύει το σώμα σε αρχείο αντί να το τυπώσει.'],
+          [/^wget\b.*(?:\s-q\b|--quiet\b)/i, 'Το -q κρύβει την πρόοδο, όχι το αρχείο που λήφθηκε.'],
+          [/^dig\b.*\+short\b/i, 'Το +short κρύβει τις επικεφαλίδες και εμφανίζει μόνο τιμές εγγραφών.'],
+          [/^ping\b.*\s-c\s*\d+/i, 'Το -c ορίζει πόσα ICMP αιτήματα θα σταλούν.'],
+          [/^(?:grep|rg)\b.*\s-n\b/i, 'Το -n προσθέτει αριθμό γραμμής στα ευρήματα.'],
+          [/^(?:grep|rg)\b.*\s-i\b/i, 'Το -i αγνοεί πεζά/κεφαλαία στην αναζήτηση.'],
+          [/^(?:grep|rg)\b.*\s-E\b/i, 'Το -E ερμηνεύει το μοτίβο ως εκτεταμένη κανονική έκφραση.'],
+          [/^journalctl\b.*\s-u\s+\S+/i, 'Το -u περιορίζει τις εγγραφές στη δηλωμένη systemd υπηρεσία.'],
+          [/^journalctl\b.*\s-n\s+\d+/i, 'Το -n ορίζει πόσες πρόσφατες γραμμές εμφανίζονται.'],
+          [/^systemctl\s+(?:start|stop|restart|enable|disable)\b/i, 'Η υποεντολή μετά το systemctl καθορίζει αν αλλάζει η τρέχουσα εκτέλεση ή η εκκίνηση κατά το boot.'],
+          [/^systemctl\s+is-active\b/i, 'Το is-active επιστρέφει active ή inactive για την τρέχουσα υπηρεσία.'],
+          [/^systemctl\s+is-enabled\b/i, 'Το is-enabled επιστρέφει enabled ή disabled για την αυτόματη εκκίνηση.'],
+          [/^openssl\b.*\s-in\s+\S+/i, 'Το -in ορίζει αρχείο εισόδου για το OpenSSL.'],
+          [/^openssl\b.*\s-out\s+\S+/i, 'Το -out αποθηκεύει το αποτέλεσμα σε αρχείο, αντί να το εμφανίσει ως κείμενο.'],
+          [/^openssl\s+dgst\s+-sha256\b/i, 'Το -sha256 επιλέγει hash 256 bits.'],
+          [/^(?:ufw|iptables|nft|firewall-cmd)\b.*(?:\ballow\s+|--dport\s+|\bdport\s+)/i, 'Η θύρα/κανόνας περιορίζει ποια κίνηση επιτρέπεται. Ελέγξτε πρωτόκολλο και πηγή.'],
+          [/^ufw\s+status\b/i, 'Το status εμφανίζει την ενεργή πολιτική firewall και τους ισχύοντες κανόνες.'],
+          [/^ss\b.*\s-ltn\b/i, 'Το -l ζητά listening sockets, το -t μόνο TCP και το -n αριθμητικές διευθύνσεις/θύρες.'],
+          [/^git\s+status\s+--short\b/i, 'Το --short δείχνει δύο χαρακτήρες κατάστασης: η πρώτη στήλη για το index (staged), η δεύτερη για working tree.'],
+          [/^(?:tcpdump|tshark)\b.*\s-i\s+\S+/i, 'Το -i ορίζει τη διεπαφή καταγραφής πακέτων.'],
+          [/^kubectl\b.*\s-n\s+\S+/i, 'Το -n ορίζει namespace στο Kubernetes.'],
+          [/^kubectl\s+apply\s+-f\s+\S+/i, 'Το apply -f εφαρμόζει το αρχείο ορισμού πόρου.'],
+          [/^python3?\b.*\s-m\s+\S+/i, 'Το -m στο Python εκτελεί συγκεκριμένο module.'],
+          [/^powershell\b.*-NoProfile\b/i, 'Το -NoProfile αγνοεί προσωπικά profiles ώστε η δοκιμή να μην εξαρτάται από το τοπικό περιβάλλον.'],
+          [/^powershell\b.*-Command\b/i, 'Το -Command εκτελεί την επόμενη εντολή PowerShell για επαλήθευση της κατάστασης.'],
+          [/^(?:vol|volatility)\b.*\s-f\s+\S+/i, 'Το -f επιλέγει την εικόνα μνήμης προς ανάλυση.'],
+          [/^yara\b.*\s-s(?:\s|$)/i, 'Το -s εμφανίζει επιπλέον τις συμβολοσειρές του κανόνα που ταίριαξαν.'],
+          [/^yara\b.*\s-r(?:\s|$)/i, 'Το -r ελέγχει αναδρομικά τον επιλεγμένο κατάλογο.'],
+          [/^clamscan\b.*\s-r\b/i, 'Το -r ζητά αναδρομικό έλεγχο καταλόγου.']
+        ];
+        const notes = options.filter(([pattern]) => pattern.test(command)).map(([, meaning]) => meaning);
+        const operand = command.match(/(?:^|\s)([~/.\w-]+\.(?:txt|log|json|pem|pcap|yaml|bin|py|sh|key|conf))(?=\s|$)/i)?.[1];
+        if (operand) notes.push(`Το ${operand} είναι το αρχείο/όρισμα της εντολής.`);
+        if (!notes.length && /^\w+(?:-\w+)?\s+\S+/.test(command)) {
+          notes.push('Τα ορίσματα μετά το όνομα του εργαλείου επιλέγουν λειτουργία, στόχο ή αρχείο. Διαβάστε τα μαζί με το αντίστοιχο αποτέλεσμα.');
+        }
+        return `${purpose} ${notes.join(' ')}`.trim();
+      }
+
+      function silentOutcome(command, example, file, target) {
+        const tool = command.match(/^[\w.+-]+/)?.[0] || 'script';
+        const action = command.match(/^(?:systemctl|git|docker|kubectl|openssl|gpg)\s+(\S+)/i)?.[1]?.toLowerCase();
+        const name = command.match(/(?:-out\s+|--output\s+|-o\s+)([^\s]+)/i)?.[1]?.replace(/["']/g, '') || file;
+        const illustrative = (output, explanation, kind = 'artifact') => ({
+          output: output.replace(/[\u0370-\u03ff]+/gu, 'sample'), explanation, kind
+        });
+
+        if (/\s+\|\s+/.test(command)) {
+          const stages = command.split(/\s+\|\s+/);
+          const source = stages[0].split(/\s+/)[0];
+          const destination = stages.at(-1).split(/\s+/)[0];
+          return illustrative(`Input stage: ${source}\nPipeline stages: ${stages.length}\nFinal stage: ${destination}\nExample value: lab fixture record`,
+            `Το ${source} παρέχει δεδομένα στο pipeline με ${stages.length} στάδια και το ${destination} παράγει την τελική μορφή. Η δοκιμαστική εγγραφή δείχνει τη ροή χωρίς να παριστάνει πραγματική μέτρηση.`, 'summary');
+        }
+        if (/^yara\b/i.test(command) || /^rule\s+\w+/i.test(command)) {
+          const rulePath = command.match(/\b[\w./-]+\.yar(?:a)?\b/i)?.[0] || 'lab.yar';
+          const sample = command.match(/\b[\w./-]+\.(?:bin|exe|txt|dat)\b/i)?.[0] || file;
+          const ruleName = command.match(/^rule\s+(\w+)/i)?.[1] || 'LabRule';
+          const showStrings = /\s-s(?:\s|$)/.test(command);
+          return illustrative(`// Illustrative contents of ${rulePath}\nrule ${ruleName} {\n  strings:\n    $marker = "LAB" ascii nocase\n  condition:\n    $marker\n}\n\n// Example fixture bytes in ${sample}: 4c 41 42 ("LAB")\n// Illustrative match\n${ruleName} ${sample}${showStrings ? '\n0x0:$marker: LAB' : ''}`,
+            `Το yara εφαρμόζει τον κανόνα του ${rulePath} στο ${sample}. Το $marker αναζητά τα bytes LAB χωρίς διάκριση πεζών.${showStrings ? ' Το -s εμφανίζει το offset 0x0 και τη συμβολοσειρά που ταίριαξε.' : ''} Αν δεν υπάρξει ταίριασμα, το YARA δεν τυπώνει γραμμή. Η τελευταία γραμμή είναι εκπαιδευτικό παράδειγμα match, όχι διαπίστωση για το πραγματικό δείγμα.`, 'rule');
+        }
+        if (/^(?:chmod|chown|setfacl|icacls)\b/i.test(command)) {
+          const mode = command.match(/(?:^|\s)([0-7]{3,4})(?=\s|$)/)?.[1];
+          const symbolic = command.match(/\b[ugoa]*[+\-=][rwxXst]+\b/)?.[0];
+          const owner = command.match(/^chown\s+(?:-\w+\s+)*([\w-]+)(?::([\w-]+))?\s+\S+$/i)?.[1] || 'analyst';
+          const group = command.match(/^chown\s+(?:-\w+\s+)*[\w-]+:([\w-]+)\s+\S+$/i)?.[1] || 'analysts';
+          const rule = command.match(/(?:-m\s+|\/grant\s+)([^\s]+)/i)?.[1];
+          const output = mode ? `File: ${file}\nMode: 0${mode.replace(/^0/, '')}\nOwner: ${owner}\nGroup: ${group}`
+            : rule ? `File: ${file}\nACL entry: ${rule}\nOwner: ${owner}`
+              : symbolic ? `File: ${file}\nRequested mode change: ${symbolic}\nOwner: ${owner}`
+                : `File: ${file}\nOwner: ${owner}\nGroup: ${group}`;
+          return illustrative(output, `Η ${tool} αφορά μόνο το ${file}. ${mode ? `Το ${mode} είναι οκταδικό mode: κάθε ψηφίο υπολογίζεται από r=4, w=2, x=1 για ιδιοκτήτη, ομάδα και λοιπούς.` : symbolic ? `Το ${symbolic} μεταβάλλει τα επιλεγμένα bits, δεν δίνει καθολική πρόσβαση.` : rule ? `Η εγγραφή ${rule} ορίζει συγκεκριμένο δικαίωμα ACL.` : `Η ιδιοκτησία στο παράδειγμα είναι ${owner}:${group}.`} Τα πεδία είναι ενδεικτική τελική κατάσταση, όχι stdout της εντολής.`);
+        }
+        if (/^systemctl\b/i.test(command)) {
+          const unit = command.match(/^systemctl\s+\S+\s+(\S+)/i)?.[1] || 'ssh.service';
+          const active = action === 'stop' ? 'inactive' : 'active';
+          const enabled = action === 'disable' ? 'disabled' : 'enabled';
+          return illustrative(`Unit: ${unit}\nActiveState: ${active}\nUnitFileState: ${enabled}`,
+            `Η systemctl ${action || 'status'} αφορά την υπηρεσία ${unit}. ActiveState περιγράφει την τρέχουσα εκτέλεση και UnitFileState την εκκίνηση κατά το boot. Η διαφορά τους εξηγεί γιατί το enable δεν ξεκινά αυτόματα την υπηρεσία.`);
+        }
+        if (/^git\b/i.test(command)) {
+          const namedFile = command.match(/\b[\w.-]+\.(?:txt|js|html|json|py|md|log)\b/i)?.[0] || file;
+          return illustrative(action === 'add' ? `Index: ${namedFile} (staged)\nWorking tree: ${namedFile} (modified)`
+            : action === 'diff' ? `diff --git a/${namedFile} b/${namedFile}\n--- a/${namedFile}\n+++ b/${namedFile}\n@@ -1 +1 @@\n-old value\n+new value`
+              : `Branch: main\nFile: ${namedFile}\nRepository state: ${action || 'updated'}`,
+            `Η git ${action || ''} αφορά το ${namedFile}. ${action === 'add' ? 'Staged σημαίνει ότι η αλλαγή μπήκε στο index, όχι ότι δημιουργήθηκε commit.' : action === 'diff' ? 'Οι γραμμές - και + είναι παλιό και νέο περιεχόμενο σε ενδεικτικό diff του ίδιου αρχείου.' : 'Η κατάσταση του αποθετηρίου είναι παράδειγμα και δεν πιστοποιεί τον κώδικα.'}`);
+        }
+        if (/^(?:curl|wget)\b/i.test(command)) {
+          return illustrative(`URL: https://${target}/${file}\nHTTP status: 200 OK\nSaved file: ${name}\nSize: 5 bytes`,
+            `Η ${tool} κατέγραψε ενδεικτική μεταφορά από ${target} στο ${name}. Ο HTTP κωδικός 200 αφορά το αίτημα, ενώ το μέγεθος αφορά το αρχείο. Ούτε το ένα πιστοποιεί το περιεχόμενο.`);
+        }
+        if (/^openssl\b/i.test(command)) {
+          const type = /genpkey|genrsa|pkey/i.test(action || '') ? 'private key' : /req|x509/i.test(action || '') ? 'certificate request' : /\benc\b/i.test(command) ? 'encrypted data' : 'cryptographic data';
+          return illustrative(`Generated file: ${name}\nObject type: ${type}\nFile mode: 0600`,
+            `Η openssl ${action || ''} παράγει ${type} στο ${name} σύμφωνα με τις παραμέτρους της εντολής. Το mode 0600 περιορίζει ανάγνωση/εγγραφή στον ιδιοκτήτη, αλλά δεν αποδεικνύει εγκυρότητα κλειδιού ή πιστοποιητικού.`);
+        }
+        if (/^gpg\b/i.test(command)) {
+          const outputFile = name === 'sample.txt' ? `${file}.gpg` : name;
+          return illustrative(`Generated file: ${outputFile}\nFormat: OpenPGP encrypted message\nRecipient: analyst@lab.example`,
+            `Η gpg παρήγαγε ενδεικτικό κρυπτογραφημένο μήνυμα στο ${outputFile}. Το recipient περιγράφει το επιλεγμένο δημόσιο κλειδί, όχι ότι το μήνυμα αποκρυπτογραφήθηκε.`);
+        }
+        if (/^(?:ufw|iptables|nft|firewall-cmd|netsh)\b/i.test(command)) {
+          const port = command.match(/(?:--dport\s+|\ballow\s+|\bport\s+)(\d{2,5})/)?.[1] || '443';
+          const actionName = /\b(?:deny|drop|reject)\b/i.test(command) ? 'deny' : 'allow';
+          return illustrative(`Tool: ${tool}\nRule: ${actionName} tcp/${port}\nSource: 192.0.2.0/24`,
+            `Ο κανόνας της ${tool} αφορά TCP θύρα ${port} και τη δοκιμαστική πηγή 192.0.2.0/24. Η τιμή ${actionName} περιγράφει ενδεικτική επίδραση του κανόνα, όχι συνολική πολιτική του firewall.`);
+        }
+        if (/^kubectl\b/i.test(command)) {
+          const resource = command.match(/\b(?:deployment|pod|service)\/?([\w-]+)/i)?.[1] || 'lab-api';
+          const state = /\bdelete\b/i.test(command) ? 'removed' : 'configured';
+          return illustrative(`Resource: deployment.apps/${resource}\nNamespace: lab\nState: ${state}`,
+            `Η kubectl ${action || ''} αφορά τον πόρο ${resource} στο namespace lab. Το ${state} περιγράφει το ενδεικτικό αποτέλεσμα για αυτόν τον πόρο, όχι την υγεία όλων των pods.`);
+        }
+        if (/^docker\b/i.test(command)) {
+          const image = command.match(/\b[\w.-]+:[\w.-]+\b/)?.[0] || 'lab:latest';
+          const state = /\bstop\b/i.test(command) ? 'exited' : 'running';
+          return illustrative(`Image: ${image}\nContainer state: ${state}\nContainer ID: 3a9d7c2f1b44`,
+            `Η docker ${action || ''} αφορά την εικόνα ${image}. Το ${state} είναι κατάσταση του ενδεικτικού container, όχι αποτέλεσμα ελέγχου ευπαθειών.`);
+        }
+        if (/^(?:Set-|New-|Remove-|Enable-|Disable-|pwsh|powershell|sc\.exe)\b/i.test(command)) {
+          const subject = command.match(/(?:-Name\s+|-DisplayName\s+)([\w-]+)/i)?.[1] || tool;
+          return illustrative(`Object: ${subject}\nOperation: ${tool}\nExample state: ${/^Remove-|^Disable-/i.test(command) ? 'disabled' : 'enabled'}`,
+            `Η ${tool} αλλάζει το αντικείμενο ${subject}. Η τελική τιμή είναι εκπαιδευτικό στιγμιότυπο του ίδιου αντικειμένου, όχι απόκριση μιας άσχετης υπηρεσίας.`);
+        }
+        if (/^(?:echo|printf)\b/i.test(command) && />\s*\S+/.test(command)) {
+          return illustrative(`File: ${name}\nContent: ${command.match(/['"]([^'"]+)['"]/)?.[1] || 'Hello'}`,
+            `Η ανακατεύθυνση > γράφει σε ${name} αντί στην οθόνη. Το περιεχόμενο είναι παράδειγμα του αποτελέσματος της ίδιας εντολής.`);
+        }
+        if (/^(?:python3?|node|bash|sh)\b/i.test(command) || /^\.\//.test(command)) {
+          const script = command.match(/\b[\w./-]+\.(?:py|js|sh)\b/i)?.[0] || command.split(/\s+/).at(-1);
+          return illustrative(`Script: ${script}\nInput: lab fixture\nExample artifact: analysis summary`,
+            `Η ${tool} ξεκινά το ${script}. Το παράδειγμα δείχνει το είδος παραγόμενου αρχείου/σύνοψης, όχι συγκεκριμένο stdout που δεν μπορεί να συναχθεί χωρίς τον κώδικα και τα δεδομένα του.`);
+        }
+        const setting = command.match(/\b(?:enabled|port|mode|action|status)\s*[:=]\s*[\w.-]+/i)?.[0];
+        if (setting) return illustrative(`Relevant expression: ${setting}\nConfiguration key: ${setting.split(/[:=]/)[0].trim()}\nExample value: ${setting.split(/[:=]/)[1].trim()}`,
+          `Η ρύθμιση ${setting} δείχνει κλειδί και τιμή στο ίδιο απόσπασμα. Εξηγούμε την τιμή που φαίνεται, όχι απάντηση διαφορετικού εργαλείου.`, 'summary');
+        const argumentsText = command.trim().split(/\s+/).slice(1, 5).join(' ') || '(no arguments)';
+        return illustrative(`Program: ${tool}\nArguments: ${argumentsText}\nExample outcome: lab operation completed`,
+          `Το ${tool} λαμβάνει τα ορίσματα ${argumentsText}. Το εκπαιδευτικό αποτέλεσμα αναφέρεται μόνο στη συγκεκριμένη κλήση. Χωρίς πραγματικά δεδομένα δεν επινοείται επιπλέον stdout.`, 'summary');
+      }
+
+      function logResult(filter, source = filter) {
+        const candidate = filter.match(/^(?:grep|rg|findstr)(?:\s+-[a-zA-Z]+)*\s+(?:['"]([^'"]+)['"]|([^\s|]+))/i);
+        const pattern = candidate?.[1] || candidate?.[2];
+        if (!pattern) return null;
+        const flags = /(?:^|\s)-(?:[a-z]*i[a-z]*)(?:\s|$)/i.test(filter) ? 'i' : '';
+        let expression;
+        try { expression = new RegExp(pattern, flags); }
+        catch { return null; }
+        const authEntries = [
+          'Mar  1 12:00:00 lab sshd[1234]: Failed password for invalid user guest from 192.0.2.42 port 51024 ssh2',
+          'Mar  1 12:00:00 lab sshd[1234]: Failed password for invalid user guest from 192.0.2.42 port 51024 ssh2',
+          'Mar  1 12:04:00 lab sshd[1235]: Accepted publickey for analyst from 192.0.2.42 port 51025 ssh2'
+        ];
+        const appEntries = [
+          'Mar  1 12:06:00 lab app[1236]: ERROR invalid configuration value',
+          'Mar  1 12:07:00 lab app[1236]: WARN retrying request'
+        ];
+        const mailEntries = [
+          'Authentication-Results: lab.example; dmarc=fail; spf=fail',
+          'From: security@lab.example',
+          'Subject: Account verification'
+        ];
+        const webEntries = [
+          '192.0.2.42 - - [01/Mar/2026:12:00:00 +0000] "GET /login HTTP/1.1" 401 142',
+          '192.0.2.42 - - [01/Mar/2026:12:01:00 +0000] "GET /dashboard HTTP/1.1" 200 843'
+        ];
+        const accountEntries = [
+          'root:x:0:0:root:/root:/bin/bash'
+        ];
+        const journalUnit = source.match(/^journalctl\b.*?\s-u\s+([\w.-]+)/i)?.[1] || '';
+        const entries = /\.(?:eml|msg)\b/i.test(source) ? mailEntries
+          : /(?:\/etc\/passwd|\bpasswd\b)/i.test(source) ? accountEntries
+            : /(?:auth|secure|sshd)\.?(?:log)?\b/i.test(source) ? authEntries
+              : /(?:access|nginx|apache)\.log\b/i.test(source) ? webEntries
+              : /(?:app|error)\.log\b/i.test(source) ? appEntries
+                : /^(?:ssh|sshd)(?:\.service)?$/i.test(journalUnit) ? authEntries
+                  : /^nginx(?:\.service)?$/i.test(journalUnit) ? webEntries
+                    : /^(?:app|lab-api)(?:\.service)?$/i.test(journalUnit) ? appEntries
+                : /\.log\b|^journalctl\b/i.test(source)
+                  ? [...authEntries, ...appEntries, ...webEntries]
+                  : null;
+        if (!entries) return null;
+        const invert = /(?:^|\s)-(?:[a-z]*v[a-z]*)(?:\s|$)/i.test(filter);
+        return entries.filter(line => expression.test(line) !== invert);
+      }
+
+      function noMatches(command, file) {
+        const pattern = command.match(/^(?:grep|rg|findstr)(?:\s+-[a-zA-Z]+)*\s+(?:['"]([^'"]+)['"]|([^\s|]+))/i);
+        const query = (pattern?.[1] || pattern?.[2] || 'search').replace(/[\u0370-\u03ff]+/gu, 'sample');
+        return {
+          output:`Input: ${file.replace(/[\u0370-\u03ff]+/gu, 'sample')}\nPattern: ${query}\nMatching lines: 0`,
+          explanation:`Στο υποθετικό αρχείο ${file} το φίλτρο ${query} δεν επέστρεψε εγγραφές. Το 0 μετρά αντιστοιχίες στο δείγμα, δεν αποδεικνύει ότι δεν υπάρχουν συμβάντα σε πραγματικά logs.`,
+          kind:'summary'
+        };
+      }
+
+      // Interpret values that actually appear in the transcript; do not infer privileges from a UID.
+      function interpret(c, output, explanation) {
+        const details = [];
+        const add = (fragment, meaning) => {
+          if (fragment && output.includes(fragment) && !details.some(item => item.fragment === fragment)) {
+            details.push({ fragment, meaning });
+          }
+        };
+        const match = expression => output.match(expression)?.[0];
+        const mode = 'Το 0640 είναι οκταδικά δικαιώματα: ιδιοκτήτης 6 = 4 (ανάγνωση) + 2 (εγγραφή), ομάδα 4 = μόνο ανάγνωση, λοιποί 0. Το x θα πρόσθετε 1. Το UID δεν είναι αυτός ο αριθμός δικαιωμάτων.';
+        const uid = 'Το UID 1000 είναι αριθμητική ταυτότητα του analyst, όχι επίπεδο δικαιωμάτων. Συνήθως το useradd ξεκινά κανονικούς χρήστες από UID_MIN=1000 στο /etc/login.defs και επιλέγει διαθέσιμο UID, ενώ root είναι UID 0. Αν αρχείο ανήκει στο UID 1000 και έχει mode 0640, εφαρμόζονται τα bits ιδιοκτήτη 6 = ανάγνωση 4 + εγγραφή 2, επειδή ταυτίζεται το UID, όχι επειδή ο αριθμός 1000 «δίνει» αυτά τα δικαιώματα. ACL μπορεί να επηρεάζει επιπλέον τον έλεγχο.';
+        add(match(/^Matching lines: 0$/m), 'Στο εκπαιδευτικό αρχείο δεν βρέθηκε γραμμή που να ταιριάζει. Δεν τεκμηριώνει απουσία συμβάντων σε άλλα αρχεία.');
+        add(match(/^rule \w+ \{$/m), 'Αυτή είναι η αρχή ενός ενδεικτικού κανόνα YARA. Η συνθήκη καθορίζει πότε ένα δείγμα παράγει match.');
+        add(match(/\$marker = "LAB" ascii nocase/), 'Το $marker εντοπίζει τα ASCII bytes LAB χωρίς διάκριση πεζών/κεφαλαίων.');
+        if (/^yara\b|^rule\b/i.test(c)) {
+          add(match(/^\w+ [\w./-]+\.(?:bin|exe|txt|dat)$/m), 'Η γραμμή στο παράδειγμα δείχνει όνομα κανόνα και δείγμα που θα ταίριαζε, όχι εύρημα από πραγματική εκτέλεση.');
+        }
+        if (/^(?:id|whoami|groups|getent)\b/i.test(c)) {
+          add(match(/uid=1000\(analyst\)/), uid);
+          if (/^id\s+-u\b/i.test(c)) add('1000', uid);
+          add(match(/gid=1000\(analysts\)/), 'Το GID 1000 είναι η πρωτεύουσα ομάδα του analyst. Ελέγχεται έναντι του group owner ενός αρχείου, δεν αντιστοιχεί σε δικαίωμα 1000.');
+          add(match(/groups=1000\(analysts\),27\(sudo\)/), 'Το groups απαριθμεί την πρωτεύουσα ομάδα 1000(analysts) και τη συμπληρωματική 27(sudo). Οι αριθμοί είναι GID, όχι bits δικαιωμάτων. Η δυνατότητα sudo εξαρτάται από την πολιτική sudoers και δεν χαρίζει αυτόματα root.');
+          add(match(/^analyst:x:1000:1000:[^\n]+/m), 'Στο /etc/passwd τα πεδία διαχωρίζονται με : : username, x (κωδικός αλλού), UID 1000, πρωτεύον GID 1000, περιγραφή, home και shell. Ο αριθμός 1000 είναι ταυτότητα, όχι άθροισμα δικαιωμάτων.');
+          if (/^whoami\b/i.test(c)) add('analyst', 'Το whoami εμφανίζει το όνομα του ενεργού UID μέσω της βάσης λογαριασμών. Για αριθμό UID και GID εκτελέστε id.');
+          if (/^groups\b/i.test(c)) add('analyst analysts', 'Η συμμετοχή στις ομάδες επηρεάζει πρόσβαση όταν το αρχείο ανήκει σε μία από αυτές. Για αρχείο 0640, η ομάδα μπορεί να διαβάζει (4), όχι να γράφει (2).');
+        } else if (/^(?:ls|stat|getfacl|icacls|chmod|chown|setfacl|umask)\b/i.test(c)) {
+          add(match(/-rw-r-----/), `Η πρώτη παύλα είναι τύπος κανονικού αρχείου, οι επόμενες τριάδες rw- / r-- / --- δίνουν owner/group/others. ${mode}`);
+          add(match(/\b0640\b/), mode);
+          add(match(/\b0644\b/), 'Το 0644 προκύπτει ως 6=4+2 για τον ιδιοκτήτη, 4 για την ομάδα, 4 για τους λοιπούς. Μετά το chmod 640 αφαιρείται η ανάγνωση των λοιπών.');
+          add(match(/Uid:\s*\(?1000\/analyst\)?/), 'Ο αριθμός 1000 δείχνει τον ιδιοκτήτη αρχείου. Ο πυρήνας συγκρίνει UID διεργασίας και ιδιοκτήτη, ο αριθμός μόνος του δεν δίνει πρόσβαση.');
+          add(match(/^# owner: analyst/m), 'Το όνομα είναι ο ιδιοκτήτης ACL. Η αντίστοιχη εγγραφή user:: εφαρμόζεται αν το ενεργό UID ταυτίζεται με του ιδιοκτήτη.');
+          add(match(/^user::rw-/m), 'Ο ιδιοκτήτης μπορεί να διαβάζει (r=4) και να γράφει (w=2), όχι να εκτελεί (x=0): 6.');
+          add(match(/^group::r--/m), 'Η ομάδα μπορεί μόνο να διαβάζει: r=4. Με ACL, ελέγξτε και τυχόν mask για τα αποτελεσματικά δικαιώματα.');
+          add(match(/^other::---/m), 'Για όσους δεν ταυτίζονται με ιδιοκτήτη ή ομάδα δεν δίνεται r/w/x: 0.');
+          add(match(/LAB\\analysts:\(R\)/), 'Το (R) στην ACL των Windows σημαίνει Read για την ομάδα LAB\\analysts, όχι δικαίωμα που προκύπτει από το όνομά της.');
+          if (/^umask\b/i.test(c)) add('0022', 'Το umask αφαιρεί bits από το αρχικό mode: αρχείο 0666 & ~0022 = 0644, κατάλογος 0777 & ~0022 = 0755. Δεν αλλάζει UID/GID.');
+          add(match(/Successfully processed 1 files; Failed processing 0 files/), 'Ένα αρχείο εξετάστηκε χωρίς σφάλμα. Η πολιτική πρόσβασης πρέπει ακόμη να ελεγχθεί ως προς την ανάγκη του χρήστη.');
+        } else if (/^(?:sha(?:1|256|512)sum|shasum|md5sum|Get-FileHash|openssl\s+dgst|certutil\s+-hashfile|hashdeep)\b/i.test(c)) {
+          const hexes = output.match(/\b[a-f0-9]{32,128}\b/ig) || [];
+          add(hexes.find(value => value.length === 128), 'Το SHA-512 δίνει 512 bits = 128 δεκαεξαδικούς χαρακτήρες. Δεν είναι UID ή κλειδί αποκρυπτογράφησης, συγκρίνεται με αξιόπιστο αποτύπωμα.');
+          add(hexes.find(value => value.length === 64), 'Το SHA-256 δίνει 256 bits = 64 δεκαεξαδικούς χαρακτήρες (κάθε hex ψηφίο = 4 bits). Η σύγκριση ελέγχει bytes, όχι την αξιοπιστία της πηγής του hash.');
+          add(hexes.find(value => value.length === 40), 'Το SHA-1 δίνει 160 bits = 40 hex ψηφία και δεν ενδείκνυται για νέες εφαρμογές με απαιτήσεις αντίστασης σε συγκρούσεις.');
+          add(hexes.find(value => value.length === 32), 'Το MD5 δίνει 128 bits = 32 hex ψηφία και δεν είναι κατάλληλο για έλεγχο έναντι σκόπιμης αλλοίωσης.');
+          add(match(/[^\n: ]+\.\w+: OK/), 'Το OK δείχνει ταύτιση με τον καταγεγραμμένο checksum. Αν κάποιος αλλοίωσε και το αρχείο αναφοράς, το OK δεν αποδεικνύει γνησιότητα.');
+          add(match(/^5,[a-f0-9]{32},[a-f0-9]{64},[^\n]+/mi), 'Το πρώτο πεδίο 5 είναι bytes του δοκιμαστικού αρχείου Hello, έπειτα MD5, SHA-256 και όνομα αρχείου, με τη σειρά της κεφαλίδας.');
+        } else if (/^openssl\s+rand\b/i.test(c)) {
+          if (/^[a-f0-9]+$/i.test(output)) add(output, `Η -hex εκτύπωσε ${output.length} hex ψηφία: ${output.length / 2} bytes × 8 = ${output.length * 4} bits. Η τιμή είναι σταθερό εκπαιδευτικό παράδειγμα, όχι ασφαλές τυχαίο μυστικό.`);
+          else add(output, 'Η -base64 κωδικοποιεί τα τυχαία bytes σε εκτυπώσιμους χαρακτήρες. Η κωδικοποίηση δεν είναι κρυπτογράφηση.');
+        } else if (/^openssl\b|^testssl\.sh\b|^gpg\b|^base64\b/i.test(c)) {
+          add(match(/Verify return code: 0 \(ok\)/), 'Το OpenSSL επαλήθευσε την αλυσίδα με το διαθέσιμο trust store, το 0 δεν αρκεί από μόνο του για έλεγχο ονόματος domain.');
+          add(match(/TLSv1\.3|TLS 1\.3/), 'Η σύνδεση χρησιμοποίησε TLS 1.3, όχι το παλιότερο TLS 1.0/1.1.');
+          add(match(/TLS_AES_256_GCM_SHA384/), 'AES-256-GCM προστατεύει τα δεδομένα συνεδρίας, το SHA-384 χρησιμοποιείται στην οικογένεια κρυπτογραφικών συναρτήσεων της σουίτας.');
+          add(match(/subject=CN = [^\n]+/), 'Το Subject ονομάζει την ταυτότητα του πιστοποιητικού, για HTTPS ελέγχεται ειδικά το SAN του domain.');
+          add(match(/issuer=CN = [^\n]+/), 'Το Issuer είναι η αρχή που υπέγραψε το πιστοποιητικό, όχι απόδειξη αξιοπιστίας χωρίς έλεγχο αλυσίδας.');
+          add(match(/notAfter=[^\n]+/), 'Το notAfter είναι η ημερομηνία λήξης UTC, μετά από αυτήν δεν είναι αποδεκτή η χρονική ισχύς του πιστοποιητικού.');
+          add(match(/Good signature[^\n]*/), 'Η υπογραφή επαληθεύτηκε με το αντίστοιχο δημόσιο κλειδί. Ελέγξτε χωριστά αν εμπιστεύεστε το κλειδί/ταυτότητα.');
+          add(match(/pub\s+ed25519\s+[^\n]+/), 'Το pub δηλώνει δημόσιο κλειδί Ed25519. Τα [SC] δηλώνουν χρήση για υπογραφή και πιστοποίηση, όχι εξουσιοδότηση αρχείων.');
+          add(match(/uid\s+\[ultimate\][^\n]+/), 'Το uid εδώ είναι ετικέτα ταυτότητας χρήστη στο GPG keyring, όχι το αριθμητικό Linux UID=1000. Η εμπιστοσύνη [ultimate] είναι τοπική ρύθμιση.');
+          add(match(/SHA256:[A-Za-z0-9+/]+/), 'Το fingerprint είναι συνοπτικό αποτύπωμα δημόσιου κλειδιού. Συγκρίνετέ το από ανεξάρτητο κανάλι πριν εμπιστευτείτε το κλειδί.');
+          add(match(/SGVsbG8=/), 'Το Base64 κωδικοποιεί τα πέντε bytes Hello σε 8 ASCII χαρακτήρες, αποκωδικοποιείται χωρίς μυστικό κλειδί.');
+          if (/^base64\b/i.test(c)) add(match(/^Hello$/m), 'Η αποκωδικοποίηση επανέφερε τα αρχικά bytes Hello. Δεν παρέχεται εμπιστευτικότητα.');
+          add(match(/^Verified OK$/m), 'Το verify δείχνει έγκυρη υπογραφή για αυτά τα δεδομένα και κλειδί, όχι ότι είναι νόμιμη η ταυτότητα κατόχου.');
+          add(match(/[^\n ]+\.(?:pem|crt|cer): OK/), 'Το πιστοποιητικό επαληθεύτηκε ως προς την αλυσίδα. Το OK δεν ελέγχει απαραίτητα το hostname αν δεν ζητήθηκε ρητά.');
+        } else if (/^nmap\b|^(?:nikto|sqlmap)\b/i.test(c)) {
+          add(match(/Host is up \([^\n]+\)/), 'Ο στόχος απάντησε στην ανακάλυψη. Η καθυστέρηση αφορά το δοκιμαστικό RTT, όχι μέτρηση ασφάλειας.');
+          for (const portLine of output.matchAll(/^\d+\/tcp[ \t]+open[ \t]+[^\n]+/gm)) {
+            const port = portLine[0].split('/')[0];
+            add(portLine[0], `Η ${port}/tcp είναι ανοικτή θύρα στο δοκιμαστικό scan. Η υπηρεσία/έκδοση αναφέρεται από το εργαλείο, η παρουσία της δεν αποδεικνύει ευπάθεια.`);
+          }
+          for (const portLine of output.matchAll(/^\d+\/udp[ \t]+open\|filtered[ \t]+[^\n]+/gm)) {
+            add(portLine[0], 'Το open|filtered σε UDP σημαίνει ότι το nmap δεν μπορεί να ξεχωρίσει ανοικτή από φιλτραρισμένη θύρα χωρίς απόκριση. Δεν είναι επιβεβαίωση υπηρεσίας.');
+          }
+          add(match(/Nmap done: 1 IP address \(1 host up\)/), 'Σαρώθηκε μία διεύθυνση και ένας host ήταν προσπελάσιμος. Δεν αποδεικνύεται ότι ελέγχθηκαν όλες οι υπηρεσίες του.');
+          add(match(/does not appear to be injectable/), 'Το εργαλείο δεν βρήκε ένδειξη SQL injection στη συγκεκριμένη παράμετρο/δοκιμή, δεν αποδεικνύει ότι όλη η εφαρμογή είναι ασφαλής.');
+          add(match(/Target Port: 443/), 'Η θύρα 443 είναι η τυπική HTTPS υπηρεσία που εξετάζεται εδώ.');
+        } else if (/^(?:dig|host|nslookup)\b/i.test(c)) {
+          add(match(/300\s+IN\s+[AMTXT]+\s+[^\n]+/), 'Το TTL 300 είναι 300 δευτερόλεπτα caching, IN είναι Internet class, ενώ A δείχνει IPv4, MX διακομιστή mail και TXT πληροφορία όπως πολιτική SPF.');
+          add(match(/(?:has address|Address:)\s*\d+\.\d+\.\d+\.\d+/), 'Αυτή είναι η IPv4 απάντηση του resolver για το όνομα, όχι πιστοποίηση ότι ο προορισμός είναι αξιόπιστος.');
+          add(match(/(?:mail is handled by|mail exchanger = )\s*10\s+[^\n]+/), 'Το MX priority 10 ορίζει προτεραιότητα διακομιστή email, μικρότερος αριθμός προτιμάται.');
+          add(match(/v=spf1 -all/), 'Η πολιτική SPF -all δηλώνει ότι κανένας εξυπηρετητής δεν επιτρέπεται να αποστείλει αλληλογραφία για αυτό το demo domain.');
+          add(match(/Query time: 12 msec/), 'Ο resolver χρειάστηκε 12 ms για την απόκριση του παραδείγματος, όχι χρόνο ισχύος εγγραφής.');
+          if (/^dig\b.*\+short/i.test(c)) add(output.trim(), /^\d+\./.test(output)
+            ? 'Με +short βλέπετε μόνο την τιμή της A εγγραφής (IPv4). Το TTL και ο resolver δεν εκτυπώνονται σε αυτή τη μορφή.'
+            : 'Με +short βλέπετε μόνο την τιμή MX ή TXT, το 10 σε MX είναι προτεραιότητα, όχι δικαίωμα πρόσβασης.');
+        } else if (/^(?:curl|wget|Invoke-(?:WebRequest|RestMethod))\b/i.test(c)) {
+          add(match(/HTTP\/1\.1 (?:200 OK|201 Created)/), '200 σημαίνει επιτυχής απόκριση HTTP, 201 δηλώνει δημιουργία πόρου. Δεν σημαίνουν ότι το περιεχόμενο είναι ασφαλές.');
+          add(match(/content-type: [^\r\n]+/), 'Το Content-Type δηλώνει τη μορφή του σώματος που ισχυρίζεται ο server (π.χ. JSON), όχι αν τα δεδομένα είναι έμπιστα.');
+          add(match(/"status":"(?:ok|created)"/), 'Το status είναι πεδίο JSON της εφαρμογής και όχι HTTP status ή απόδειξη ότι έγινε έλεγχος πρόσβασης.');
+          add(match(/saved \[5\/5\]/), 'Τα 5/5 bytes του δείγματος αποθηκεύτηκαν. Ελέγξτε ξανά μέγεθος και αποτύπωμα πριν εκτελέσετε αρχείο.');
+        } else if (/^(?:tcpdump|tshark|ping|traceroute|tracepath)\b/i.test(c)) {
+          add(match(/(?:Flags \[S\]|\[SYN\])[^\n]*/), 'SYN είναι το πρώτο αίτημα ανοίγματος TCP σύνδεσης από client προς server.');
+          add(match(/(?:Flags \[S\.\]|\[SYN, ACK\])[^\n]*/), output.includes('ack 102')
+            ? 'SYN-ACK είναι η απάντηση του server, εδώ ack 102 επιβεβαιώνει το αρχικό seq 101 + 1.'
+            : 'SYN-ACK είναι η απάντηση του server στο SYN. Ελέγξτε τη συνέχεια της χειραψίας πριν συμπεράνετε ότι ολοκληρώθηκε η σύνδεση.');
+          add(match(/icmp_seq=1/), 'icmp_seq=1 είναι ο αύξων αριθμός του πρώτου ICMP echo reply, όχι UID ή αριθμός προνομίου.');
+          add(match(/ttl=64/), 'Το TTL είναι όριο βημάτων που μειώνεται σε κάθε δρομολογητή, η τιμή 64 δεν είναι ποσοστό διαθεσιμότητας.');
+          add(match(/0% packet loss/), 'Στα ελάχιστα πακέτα αυτού του παραδείγματος δεν υπήρξε απώλεια. Δεν εγγυάται ότι η υπηρεσία εφαρμογής λειτουργεί.');
+          add(match(/\b1  192\.0\.2\.1[^\n]*/), 'Το hop 1 είναι ο πρώτος ενδιάμεσος δρομολογητής, οι τρεις τιμές ms είναι ξεχωριστές μετρήσεις RTT.');
+        } else if (/^(?:ip|ifconfig|ss|netstat|lsof|nc|netcat|ncat|socat|ssh)\b/i.test(c)) {
+          add(match(/192\.0\.2\.10\/24/), 'Το /24 είναι 24 bits prefix δικτύου (μάσκα 255.255.255.0). Η 192.0.2.10 είναι IPv4 υπολογιστή στο δοκιμαστικό δίκτυο, όχι δικαίωμα.');
+          add(match(/default via 192\.0\.2\.1 dev eth0/), 'Η προεπιλεγμένη διαδρομή στέλνει πακέτα προς τον gateway 192.0.2.1 μέσω eth0 όταν δεν υπάρχει πιο συγκεκριμένη διαδρομή.');
+          add(match(/127\.0\.0\.1:22/), 'Η 127.0.0.1 είναι loopback: η θύρα 22 ακούει μόνο στον ίδιο υπολογιστή. Το 22 είναι port SSH, όχι PID ή UID.');
+          add(match(/pid=1234|1234\/sshd/), 'Το 1234 είναι PID διεργασίας sshd, όχι UID χρήστη, αναγνωρίζει τη διεργασία που κατέχει τη θύρα.');
+          add(match(/sshd\s+1234\s+root/), 'Το 1234 είναι PID της διεργασίας sshd, ενώ root είναι ο λογαριασμός εκτέλεσής της. PID και UID είναι διαφορετικοί αριθμοί.');
+          add(match(/port \[tcp\/https\] succeeded/), 'Η TCP σύνδεση στη θύρα 443 ολοκληρώθηκε. Δεν έχει επιβεβαιωθεί η ταυτότητα ή η ορθότητα TLS μόνο από το TCP connect.');
+          add(match(/Last login:[^\n]+/), 'Η γραμμή εμφανίζει ώρα και προέλευση προηγούμενης σύνδεσης, όχι απόδειξη ότι ο χρήστης εξουσιοδοτήθηκε για όλους τους πόρους.');
+        } else if (/^(?:ssh-keygen|whois|last|lastb|hostname|hostnamectl)\b/i.test(c)) {
+          add(match(/SHA256:[A-Za-z0-9+/]+/), 'Το SHA256 εδώ είναι fingerprint δημόσιου κλειδιού SSH, το 256 στην αρχή της γραμμής είναι μήκος κλειδιού Ed25519 σε bits, όχι UID.');
+          add(match(/saved in \/home\/analyst\/\.ssh\/id_(?:rsa|ed25519)[^\n]*/), 'Η γραμμή δίνει διαδρομή ιδιωτικού κλειδιού. Περιορίστε δικαιώματα πρόσβασης και μη δημοσιεύετε το περιεχόμενό του.');
+          add(match(/No match for domain[^\n]*/), 'Το WHOIS δεν επέστρεψε εγγραφή για το δοκιμαστικό όνομα. Δεν αποδεικνύει ότι ο DNS resolver είναι εκτός λειτουργίας.');
+          add(match(/analyst\s+pts\/0\s+192\.0\.2\.42[^\n]*/), 'Η γραμμή last συσχετίζει χρήστη, τερματικό pts/0, πηγή IP και ώρα σύνδεσης. Ελέγξτε αν η πηγή είναι αναμενόμενη.');
+          add(match(/Static hostname: lab/), 'Το lab είναι hostname του συστήματος, όχι λογαριασμός ή δικαίωμα πρόσβασης.');
+          if (/^hostname\b/i.test(c)) add(match(/^lab$/m), 'Το hostname lab ταυτοποιεί το μηχάνημα στο λειτουργικό. Δεν αποδεικνύει την ταυτότητα δικτυακού peer.');
+        } else if (/^(?:grep|rg|findstr|awk|sed|sort|uniq|wc|head|tail|cat|jq|journalctl|ausearch|ps|systemctl|auditctl|Get-Content|Get-WinEvent|wevtutil)\b/i.test(c)) {
+          add(match(/12:Mar\s+1[^\n]+/), 'Το 12: πριν από το timestamp είναι αριθμός γραμμής όταν έχει ζητηθεί -n, Mar 1 12:00:00 είναι χρόνος συμβάντος, όχι ο αριθμός γραμμής.');
+          add(match(/Failed password for invalid user guest[^\n]*/), 'Η αυθεντικοποίηση απέτυχε για ανύπαρκτο guest από 192.0.2.42. Ελέγξτε επαναλήψεις και συσχετίστε με την πηγή.');
+          add(match(/Accepted publickey for analyst[^\n]*/), 'Η πρόσβαση SSH επαληθεύτηκε με δημόσιο κλειδί για analyst. Δεν συνεπάγεται sudo ή άδεια ανάγνωσης κάθε αρχείου.');
+          add(match(/Event ID: 4625|\b4625\b/), 'Το Windows Event ID 4625 δηλώνει αποτυχημένη σύνδεση. Συγκρίνετε ώρα, λογαριασμό και προέλευση για ανίχνευση μοτίβου.');
+          add(match(/Active: active \(running\)/), 'Η υπηρεσία εκτελείται τη στιγμή του status. Αυτό δεν αποδεικνύει ότι είναι σωστά ρυθμισμένη ή ασφαλής.');
+          add(match(/1234 analyst|PID USER|PID   PPID/), 'Το PID είναι ταυτότητα διεργασίας, ενώ ο USER είναι ο λογαριασμός εκτέλεσης. Μην συγχέετε PID με UID.');
+          add(match(/^0 1 5 [^\n]+/m), 'Το wc εμφανίζει 0 γραμμές (δεν υπάρχει τελικό newline), 1 λέξη και 5 bytes στο υποθετικό Hello.');
+          add(match(/"status": "ok"|"ok"/), 'Το ok είναι τιμή JSON από τα δεδομένα εισόδου ή εφαρμογή, όχι το exit status του κελύφους.');
+          add(match(/root:x:0:0:root:\/root:\/bin\/bash/), 'Στο /etc/passwd η θέση 3 είναι UID=0 (root) και η θέση 4 GID=0. Το x υποδηλώνει ότι το hash κωδικού αποθηκεύεται αλλού.');
+          add(match(/analyst:x:1000:1000:[^\n]+/), 'Το UID=1000 αντιστοιχίζεται εδώ στον analyst μέσω του passwd database. Δεν δηλώνει καθεαυτό δικαίωμα, για αρχείο 0640, ο ιδιοκτήτης έχει 4+2=6, η ομάδα 4 και οι λοιποί 0.');
+        } else if (/^(?:ufw|iptables|nft|firewall-cmd|netsh|Get-NetFirewallRule)\b/i.test(c)) {
+          add(match(/Status: active/), 'Το UFW είναι ενεργό, οι ακόλουθοι κανόνες πρέπει να ελεγχθούν για ελάχιστη απαραίτητη πρόσβαση.');
+          add(match(/22\/tcp\s+ALLOW\s+192\.0\.2\.0\/24/), 'Η TCP θύρα 22 (SSH) επιτρέπεται μόνο από το δοκιμαστικό subnet /24, δηλαδή από διευθύνσεις της αντίστοιχης ζώνης.');
+          add(match(/443\/tcp\s+ALLOW\s+Anywhere/), 'Η TCP θύρα 443 (HTTPS) επιτρέπεται από οποιαδήποτε πηγή, αυτό αυξάνει την επιφάνεια έκθεσης.');
+          add(match(/policy DROP/), 'Η προεπιλεγμένη πολιτική INPUT απορρίπτει πακέτα που δεν αντιστοιχούν σε κανόνα αποδοχής.');
+          add(match(/Action\s+: Allow/), 'Ο κανόνας επιτρέπει την κυκλοφορία όταν πληρούνται οι υπόλοιπες συνθήκες (διεύθυνση, θύρα, profile).');
+          add(match(/BlockInbound,AllowOutbound/), 'Το προφίλ Windows απορρίπτει εισερχόμενη κίνηση εκτός αν επιτρέπεται ρητά, ενώ επιτρέπει εξερχόμενη. Οι ειδικοί κανόνες μπορούν να εξειδικεύουν την πολιτική.');
+        } else if (/^(?:volatility|vol|strings|xxd|hexdump|exiftool|binwalk|yara|clamscan)\b/i.test(c)) {
+          add(match(/0x01af3400|0x0|0x00000000|00000000:/), 'Το offset είναι μετατόπιση μέσα στο δείγμα ή εικόνα, όχι φυσική διεύθυνση άλλου συστήματος. Το 0x δηλώνει δεκαεξαδική γραφή.');
+          add(match(/PID\s+PPID\s+ImageFileName[^\n]*|1234\s+500\s+explorer\.exe/), 'PID 1234 ταυτοποιεί διεργασία, PPID 500 τη γονική διεργασία. Η συσχέτιση βοηθά στην ανασύνθεση της αλυσίδας εκτέλεσης.');
+          add(match(/ESTABLISHED 1234 chrome\.exe/), 'ESTABLISHED σημαίνει ενεργή TCP σύνδεση, το PID συνδέει την κίνηση με τη διεργασία, όχι με προέλευση κακόβουλου λογισμικού.');
+          add(match(/4865 6c6c 6f/), 'Τα hex bytes 48 65 6c 6c 6f αντιστοιχούν σε ASCII "Hello". Η στήλη 00000000 είναι μετατόπιση αρχείου.');
+          add(match(/File Modification Date\/Time\s+: [^\n]+/), 'Η ώρα προέρχεται από μεταδεδομένα αρχείου και μπορεί να αλλάξει, δεν αποδεικνύει από μόνη της πότε έγινε η ενέργεια.');
+          add(match(/LabRule [^\n]+/), 'Το LabRule είναι όνομα κανόνα YARA που ταίριαξε στο δείγμα. Το match δεν συνεπάγεται βέβαιη ταυτότητα malware.');
+          add(match(/Infected files: 0/), 'Το εργαλείο δεν βρήκε υπογραφή στα σαρωμένα αρχεία, δεν αποδεικνύει απουσία κάθε κακόβουλης συμπεριφοράς.');
+          add(match(/^Hello$/m), 'Το strings εμφανίζει εκτυπώσιμα bytes Hello. Απλό αναγνώσιμο κείμενο δεν είναι από μόνο του ένδειξη εκτέλεσης ή επίθεσης.');
+          add(match(/gzip compressed data/), 'Η υπογραφή στο offset 0 αναγνωρίστηκε ως συμπιεσμένη δομή gzip, η ταυτοποίηση μορφής δεν αποδεικνύει ότι το περιεχόμενο είναι ακίνδυνο.');
+        } else if (/^(?:SELECT|SHOW|DESCRIBE)\b/i.test(c)) {
+          add(match(/\|\s*1\s*\|\s*active\s*\|/), 'Η τιμή id=1 αναγνωρίζει εγγραφή πίνακα, ενώ status=active είναι περιεχόμενο πεδίου. Κανένα από τα δύο δεν αποτελεί UID ή δικαίωμα βάσης.');
+          add(match(/1 row in set \(0\.00 sec\)/), 'Επιστράφηκε μία γραμμή στον δοκιμαστικό χρόνο. Η πρόσβαση στην εγγραφή εξαρτάται από τον λογαριασμό βάσης και το ερώτημα.');
+          add(match(/\| events\s+\|/), 'Ο πίνακας events βρέθηκε στο επιλεγμένο schema. Η εμφάνιση ονόματος δεν σημαίνει δικαίωμα τροποποίησης.');
+        } else if (/^(?:Get-|Set-|New-|Test-|pwsh|powershell|certutil|net|tasklist|schtasks|auditpol|sc\.exe)\b/i.test(c)) {
+          add(match(/TcpTestSucceeded\s+: True/), 'Η TCP σύνδεση στη θύρα που αναφέρεται πέτυχε. Δεν αποδεικνύει ότι το TLS ή η αυθεντικοποίηση της υπηρεσίας είναι σωστά.');
+          const portLine = match(/RemotePort\s+: \d+/);
+          add(portLine, `Το ${portLine?.match(/\d+$/)?.[0] || 'port'} είναι αριθμός θύρας TCP, όχι UID χρήστη ή κωδικός HTTP.`);
+          add(match(/Administrator\s+False/), 'Ο ενσωματωμένος λογαριασμός Administrator είναι ανενεργός σε αυτό το παράδειγμα, το όνομα μόνο του δεν περιγράφει δικαιώματα άλλων χρηστών.');
+          add(match(/Running\s+WinDefend/), 'Η υπηρεσία Microsoft Defender τρέχει, χρειάζεται επιπλέον έλεγχος πολιτικής και ενημερώσεων, όχι μόνο κατάστασης Running.');
+          if (/^Get-Service\b/i.test(c) && !/WinDefend/.test(output)) add(match(/Running\s+[\w-]+/),
+            'Το Running δηλώνει ότι η υπηρεσία της συγκεκριμένης εντολής εκτελείται, όχι ότι η πολιτική ασφάλειας της υπηρεσίας είναι σωστή.');
+          add(match(/Id\s+ProcessName[^\n]*\n[^\n]*1234\s+powershell/), 'Το Id 1234 είναι PID της διεργασίας PowerShell. Δεν είναι ο αριθμητικός λογαριασμός ή επίπεδο εξουσιοδότησης.');
+          add(match(/SHA256 hash of [^\n]+/), 'Το certutil υπολόγισε αποτύπωμα SHA-256 του συγκεκριμένου αρχείου. Η επόμενη γραμμή είναι 64 hex χαρακτήρες προς σύγκριση.');
+          add(match(/Logon\/Logoff \/ Logon\s+Success and Failure/), 'Καταγράφονται επιτυχείς και αποτυχημένες συνδέσεις, αναζητήστε Event IDs και συχνότητα για να εντοπίσετε ασυνήθιστη δραστηριότητα.');
+          add(match(/STATE\s+: 4\s+RUNNING/), 'Στον Service Control Manager η τιμή 4 σημαίνει τρέχουσα κατάσταση Running, όχι τέσσερα δικαιώματα ή επίπεδο ασφάλειας.');
+          add(match(/PID\s+Session Name\s+Mem Usage[^\n]*\n[^\n]*1234[^\n]*/), 'Το PID 1234 είναι αναγνωριστικό διεργασίας και το Mem Usage η χρήση μνήμης της, όχι ο αριθμητικός χρήστης που την εκτελεί.');
+          add(match(/Lab\\DailyAudit[^\n]+Ready/), 'Η προγραμματισμένη εργασία υπάρχει και είναι Ready, δηλαδή διαθέσιμη να εκτελεστεί στην επόμενη ώρα που δείχνει ο πίνακας.');
+          add(match(/The command completed successfully/), 'Το εργαλείο τερμάτισε χωρίς σφάλμα στη δοκιμή, ελέγξτε χωριστά τους λογαριασμούς/ομάδες που απαριθμούνται.');
+          add(match(/\bTrue\b/), 'Το True είναι λογική τιμή του ελέγχου της συγκεκριμένης PowerShell εντολής, όχι γενική ένδειξη ασφάλειας.');
+        } else if (/^(?:git|docker|kubectl)\b/i.test(c)) {
+          add(match(/On branch main/), 'Το main είναι η τρέχουσα τοπική διακλάδωση. Δεν δηλώνει ότι ο απομακρυσμένος κώδικας είναι ίδιος.');
+          add(match(/working tree clean/), 'Δεν υπάρχουν τοπικές μη καταγεγραμμένες αλλαγές στο working tree, δεν αποτελεί έλεγχο ευπαθειών.');
+          add(match(/commit 6d7a9bf|\[main 6d7a9bf\]/), 'Το 6d7a9bf είναι συντομευμένο αναγνωριστικό commit, το πλήρες hash και η υπογραφή χρειάζονται ξεχωριστό έλεγχο.');
+          add(match(/127\.0\.0\.1:8080->80\/tcp/), 'Η θύρα 8080 του τοπικού host προωθείται στη θύρα 80/TCP του container, η 127.0.0.1 δεν εκθέτει αυτό το mapping σε εξωτερική διεπαφή.');
+          add(match(/1\/1\s+Running/), 'Το 1/1 δηλώνει ένα ready container από ένα, Running την κατάσταση pod. Δεν αποδεικνύει ότι η εφαρμογή είναι ασφαλής.');
+          add(match(/deployment\.apps\/lab-api configured/), 'Το deployment ενημερώθηκε στην Kubernetes API, ελέγξτε στη συνέχεια rollout και readiness αντί να υποθέσετε ότι όλα τα pods είναι υγιή.');
+        } else if (/^(?:date|uname|df|du|mount|tar|unzip|echo|printf|python3?|node|bash|sh)\b/i.test(c)) {
+          add(match(/UTC 2026/), 'Το UTC είναι η ζώνη ώρας, ενοποιήστε log timestamps στην ίδια ζώνη πριν τη συσχέτιση.');
+          add(match(/Linux lab 6\.8\.0-generic/), 'Η έκδοση kernel και η αρχιτεκτονική x86_64 είναι στοιχεία απογραφής, δεν αποδεικνύουν από μόνα τους επίπεδο ενημέρωσης.');
+          add(match(/\/dev\/sda1\s+20G\s+6\.0G\s+13G\s+32%/), 'Ο δίσκος έχει ονομαστικά 20 GiB, 6 GiB χρησιμοποιούνται, 13 GiB διαθέσιμα, το 32% είναι χρήση (οι στρογγυλοποιήσεις και reserved blocks εξηγούν διαφορές).');
+          add(match(/4\.0K\s+[^\n]+/), 'Η du εμφανίζει καταλαμβανόμενο χώρο στον δίσκο, όχι απαραίτητα το ακριβές μέγεθος bytes του αρχείου.');
+          add(match(/\(rw,relatime\)/), 'rw είναι προσάρτηση για εγγραφή/ανάγνωση, relatime ρυθμίζει πότε ενημερώνεται ο χρόνος πρόσβασης.');
+          add(match(/v22\.12\.0|Python 3\.12\.3/), 'Αυτή είναι η έκδοση του runtime, όχι ένδειξη ότι τα dependencies είναι ενημερωμένα ή ασφαλή.');
+          add(match(/\b1 file$/m), 'Το 1 file είναι ο αριθμός εγγραφών του αρχείου ZIP, όχι αριθμός αρχείων που εκτελέστηκαν ή επιβεβαιώθηκαν ως ασφαλή.');
+          add(match(/^Hello$/m), 'Το Hello είναι εκτυπωμένο κυριολεκτικό ή περιεχόμενο του δοκιμαστικού αρχείου, το echo προσθέτει newline εκτός αν χρησιμοποιηθεί -n.');
+        }
+
+        if (!details.length) {
+          const fragment = output.split(/\r?\n/).find(line => line.trim())?.trim().slice(0, 110) || output;
+          add(fragment, explanation);
+        }
+        return details;
+      }
+      return steps.map(({ command, sourceLine }) => {
+        const full = command.replace(/^(?:\$\s*|#\s*|sudo\s+)+/i, '').trim();
+        const c = full.split(/\s+\|\s+/).at(-1).trim();
+        const paths = [...full.matchAll(/(?:^|[\s="'(])([/~.\w\\-]+\.(?:txt|log|pcapng?|pem|crt|cer|bin|json|csv|ya?ml|py|sh|ps1|conf|html|zip|gz|tar|db|sig|rules?|yar|key))(?=$|[\s"';|)])/gi)];
+        const file = (paths.at(-1)?.[1] || 'sample.txt').split(/[\\/]/).at(-1);
+        const urlHost = full.match(/https?:\/\/([^\s/'"?]+)/i)?.[1];
+        const sshHost = full.match(/^ssh\s+(?:(?:-\w+\s+)*[\w.-]+@)?([\w.-]+\.[\w.-]+)(?=\s|$)/i)?.[1];
+        const lastArg = c.split(/\s+/).at(-1)?.replace(/["']/g, '');
+        const target = urlHost || sshHost || (lastArg && /^(?:[\w-]+\.)+[\w-]+$|^\d{1,3}(?:\.\d{1,3}){3}$/.test(lastArg)
+          && !/\.(?:txt|log|json|pem|pcap|yaml|bin|py|sh|key|conf)$/i.test(lastArg) ? lastArg : null)
+          || full.match(/\b(?:lab\.example|example\.(?:com|org|net)|localhost|(?:192\.0\.2|198\.51\.100|203\.0\.113)\.\d+|127\.0\.0\.1)\b/i)?.[0]
+          || 'lab.example';
+        const ip = /^(?:localhost|127\.0\.0\.1)$/i.test(target) ? '127.0.0.1' : /^\d/.test(target) ? target : '192.0.2.10';
+        let result;
+        if (full !== c) {
+          const stages = full.split(/\s+\|\s+/);
+          const logFilter = stages.find(stage => /^(?:grep|rg|findstr)\b/i.test(stage));
+          const matches = logFilter ? logResult(logFilter, full) : null;
+          const supported = stages.slice(stages.indexOf(logFilter) + 1).every(stage =>
+            /^(?:awk|sort|uniq|head|tail)\b/i.test(stage) || /^wc\s+-l\b/i.test(stage));
+          if (matches && supported) {
+            const last = stages.at(-1);
+            const awk = stages.find(stage => /^awk\b/i.test(stage)) || '';
+            const field = Number(awk.match(/\$(\d+)/)?.[1] || 0);
+            const fromEnd = Number(awk.match(/\$\(NF-(\d+)\)/)?.[1] || -1);
+            if (awk && !field && fromEnd < 0) {
+              result = silentOutcome(full, example, file, target);
+              result.explanation = 'Η επιλογή πεδίου της awk δεν μπορεί να συναχθεί με ασφάλεια από το παράδειγμα. Παρουσιάζουμε τη λειτουργία του pipeline, όχι άσχετη γραμμή ως δήθεν έξοδο.';
+            } else {
+              const values = matches.map(line => {
+                if (!awk) return line;
+                const fields = line.trim().split(/\s+/);
+                return fields[field ? field - 1 : fields.length - fromEnd - 1] || '';
+              });
+              if (values.some(value => !value)) {
+                result = silentOutcome(full, example, file, target);
+                result.explanation = 'Η awk ζήτησε πεδίο που δεν υπάρχει στη δοκιμαστική εγγραφή. Το εκπαιδευτικό παράδειγμα περιγράφει τη λειτουργία χωρίς επινοημένο match.';
+              } else {
+                const unique = stages.some(stage => /^uniq\b|^sort\s+-u\b/i.test(stage));
+                const counted = stages.some(stage => /^uniq\s+-c\b/i.test(stage));
+                const compact = unique ? [...new Set(values)] : values;
+                const sample = /^wc\s+-l\b/i.test(last) ? String(compact.length)
+                  : counted ? compact.map(value => `      ${values.filter(item => item === value).length} ${value}`).join('\n')
+                    : /^head\s+-n\s*(\d+)/i.test(last) ? compact.slice(0, Number(last.match(/\s-n\s*(\d+)/)?.[1])).join('\n')
+                      : /^tail\s+-n\s*(\d+)/i.test(last) ? compact.slice(-Number(last.match(/\s-n\s*(\d+)/)?.[1])).join('\n')
+                        : compact.join('\n');
+                result = sample ? response(sample,
+                  `Το φίλτρο ${logFilter.split(/\s+/)[0]} επέλεξε ${matches.length} εγγραφές από το δοκιμαστικό log. ${counted ? 'Το uniq -c μετρά επαναλήψεις της ίδιας τιμής.' : /^wc/.test(last) ? 'Το wc -l μετρά γραμμές που έφτασαν στο τελευταίο στάδιο.' : 'Η ορατή γραμμή αντιστοιχεί στο μοτίβο και στα στάδια της εντολής.'}`)
+                  : noMatches(logFilter, file);
+              }
+            }
+          } else if (/^sha256sum\b/i.test(c) && /^printf\b/i.test(stages[0]) && /['"]Hello['"]/.test(stages[0])) {
+            result = response(`${digest.sha256}  -`, 'Το printf έστειλε τα πέντε bytes Hello στο sha256sum. Η παύλα (-) σημαίνει ανάγνωση από stdin, όχι αρχείο.');
+          } else {
+            result = silentOutcome(full, example, file, target);
+            result.explanation = `${result.explanation} Το pipeline περιλαμβάνει περισσότερα στάδια, επομένως δεν παρουσιάζουμε αποτέλεσμα άσχετης εντολής ως stdout του Task.`;
+          }
+        } else if (/^hashdeep\b/i.test(c)) {
+          result = response(`%%%% HASHDEEP-1.0\n%%%% size,md5,sha256,filename\n5,${digest.md5},${digest.sha256},${file}`,
+            'Το hashdeep καταγράφει μέγεθος, αλγορίθμους και αρχείο. Χρησιμοποιήστε SHA-256 για αξιόπιστη σύγκριση πειστηρίων.');
+        } else if (/^(?:sha(?:1|256|512)sum|shasum|md5sum|Get-FileHash|openssl\s+dgst)\b/i.test(c)) {
+          const kind = /md5/i.test(c) ? 'md5' : /sha1|shasum(?:\s+-a\s*1\b|\s+[^-])/i.test(c)
+            ? 'sha1' : /sha512|shasum\s+-a\s*512\b/i.test(c) ? 'sha512' : 'sha256';
+          const value = digest[kind];
+          const verified = /(?:\s-c\b|--check\b)/i.test(c);
+          const stdout = verified ? `${file}: OK` : /^Get-FileHash/i.test(c)
+            ? `Algorithm       Hash                                                               Path\n---------       ----                                                               ----\n${kind.toUpperCase().padEnd(15)} ${value.toUpperCase()}  C:\\Lab\\${file}`
+            : /^openssl\s+dgst/i.test(c) ? `${kind.toUpperCase()}(${file})= ${value}` : `${value}  ${file}`;
+          result = response(stdout, 'Ελέγξτε αν τα αποτυπώματα ταυτίζονται. Τα δείγματα υποθέτουν αρχείο με το κείμενο Hello χωρίς τελικό newline. MD5 και SHA-1 δεν ενδείκνυνται για αντίσταση σε σκόπιμες συγκρούσεις.');
+        } else if (/^openssl\s+s_client\b/i.test(c)) {
+          result = response(`CONNECTED(00000003)\ndepth=1 CN = Lab Root CA\nverify return:1\n---\nCertificate chain\n 0 s:CN = ${target}\n   i:CN = Lab Root CA\n---\nNew, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384\nVerify return code: 0 (ok)`, 'Η αλυσίδα οδηγεί σε έμπιστη CA και η συνεδρία διαπραγματεύτηκε TLS 1.3. Ελέγξτε χωριστά το όνομα και τη διάρκεια ισχύος του πιστοποιητικού.');
+        } else if (/^openssl\s+x509\b/i.test(c)) {
+          result = response(`subject=CN = ${target}\nissuer=CN = Lab Root CA\nnotBefore=Mar  1 00:00:00 2026 GMT\nnotAfter=Mar  1 00:00:00 2027 GMT`, 'Τα πεδία Subject, Issuer και validity δείχνουν ποιον αφορά το πιστοποιητικό, ποιος το εξέδωσε και πότε ισχύει.');
+        } else if (/^openssl\s+verify\b/i.test(c)) {
+          result = response(`${file}: OK`, 'Η αλυσίδα επαληθεύτηκε με το trust store του παραδείγματος, απαιτείται και έλεγχος ονόματος εξυπηρετητή.');
+        } else if (/^openssl\s+rand\b/i.test(c)) {
+          const bytes = Math.min(64, Math.max(1, Number(c.match(/(?:^|\s)-(?:hex|base64)\s+(\d+)(?=\s|$)/i)?.[1]) || 16));
+          let seed = 0x764af083;
+          const hex = Array.from({ length: bytes }, () => {
+            seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+            return (seed >>> 24).toString(16).padStart(2, '0');
+          }).join('');
+          result = response(/\s-out\s/i.test(c) ? noStdout : /\s-hex\b/i.test(c) ? hex :
+            /\s-base64\b/i.test(c) ? btoa(String.fromCharCode(...hex.match(/.{2}/g).map(part => parseInt(part, 16)))) :
+            noStdout,
+            'Το μήκος του hex αποτελέσματος είναι δύο χαρακτήρες ανά byte. Δεν χρησιμοποιούμε το ίδιο κλειδί δύο φορές σε πραγματικό σύστημα.');
+        } else if (/^openssl\b/i.test(c)) {
+          result = response(noStdout,
+            'Η εντολή μπορεί να γράψει σε αρχείο ή να τυπώσει ευαίσθητα bytes. Ελέγξτε το παραγόμενο αρχείο χωρίς να κοινοποιήσετε ιδιωτικά κλειδιά.');
+        } else if (/^gpg\b/i.test(c)) {
+          const fingerprint = btoa(String.fromCharCode(...digest.sha256.match(/.{2}/g)
+            .map(part => parseInt(part, 16)))).replace(/=+$/, '');
+          result = response(/--verify\b/i.test(c) ? 'gpg: Signature made Sun Mar  1 12:00:00 2026 UTC\ngpg: Good signature from "Lab Analyst <analyst@lab.example>" [ultimate]' :
+            /--list-keys\b/i.test(c) ? `pub   ed25519 2026-03-01 [SC]\n      ${digest.sha256.toUpperCase().slice(0, 40)}\nuid           [ultimate] Lab Analyst <analyst@lab.example>` :
+            /--fingerprint\b/i.test(c) ? `pub   ed25519 2026-03-01 [SC]\n      SHA256:${fingerprint}` : noStdout,
+            'Μια καλή υπογραφή απαιτεί αξιόπιστο δέσιμο του δημόσιου κλειδιού με την ταυτότητα. Η απουσία stdout σε κρυπτογράφηση χρειάζεται έλεγχο του παραγόμενου αρχείου.');
+        } else if (/^base64\b/i.test(c)) {
+          result = response(/(?:\s-d\b|--decode\b)/i.test(c) ? 'Hello' : 'SGVsbG8=', 'Το Base64 είναι αναστρέψιμη κωδικοποίηση των bytes Hello, όχι κρυπτογράφηση.');
+        } else if (/^nmap\b/i.test(c)) {
+          const selectedPorts = c.match(/(?:\s-p\s*)(\d{1,5}(?:,\d{1,5})*)\b/)?.[1];
+          const service = { '22': 'ssh', '53': 'domain', '80': 'http', '443': 'https', '445': 'microsoft-ds' };
+          const udp = /\s-sU(?:\s|$)/i.test(c);
+          const ports = selectedPorts ? selectedPorts.split(',').slice(0, 5) : udp ? ['53'] : ['22', '443'];
+          const header = /(?:\s-sV\b|\s-A\b)/.test(c) ? 'PORT     STATE SERVICE VERSION' : 'PORT     STATE SERVICE';
+          const rows = ports.map(n => `${n}/${udp ? 'udp' : 'tcp'}`.padEnd(9) + (udp ? 'open|filtered  ' : 'open  ') + (service[n] || 'unknown') +
+            (!udp && header.includes('VERSION') ? n === '22' ? ' OpenSSH 9.2p1' : ['80', '443'].includes(n) ? ' nginx 1.24.0' : '' : ''));
+          result = response(`Starting Nmap 7.95 ( https://nmap.org )\nNmap scan report for ${target === ip ? ip : `${target} (${ip})`}\nHost is up (0.0021s latency).\n${header}\n${rows.join('\n')}\nNmap done: 1 IP address (1 host up) scanned in 0.43 seconds`, udp
+            ? 'Με -sU ελέγχεται UDP. Το open|filtered δηλώνει αβεβαιότητα ανάμεσα σε ανοικτή και φιλτραρισμένη θύρα, όχι επιβεβαιωμένη υπηρεσία.'
+            : 'Η κατάσταση open σημαίνει ότι η εργαστηριακή υπηρεσία απάντησε, όχι ότι είναι ευάλωτη. Συγκρίνετε τις θύρες με το επιτρεπόμενο πεδίο ελέγχου.');
+        } else if (/^testssl\.sh\b/i.test(c)) {
+          result = response(`Testing protocols via sockets for ${target}:443\n TLS 1.3    offered (OK)\n TLS 1.2    offered (OK)\n TLS 1.1    not offered (OK)\n TLS 1.0    not offered (OK)`,
+            'Η έξοδος δείχνει ποια πρωτόκολλα προσφέρονται. Εξετάστε αν οι παρωχημένες εκδόσεις έχουν απενεργοποιηθεί.');
+        } else if (/^(?:nikto|sqlmap)\b/i.test(c)) {
+          result = response(/^sqlmap/i.test(c)
+            ? '[12:00:01] [INFO] testing connection to the target URL\n[12:00:02] [INFO] testing if GET parameter "id" is dynamic\n[12:00:03] [WARNING] GET parameter "id" does not appear to be injectable'
+            : `- Nikto v2.5.0\n+ Target IP: ${ip}\n+ Target Port: 443\n+ Server: nginx/1.24.0\n+ 0 error(s) and 1 item(s) reported on remote host`, 'Ένα αποτέλεσμα εργαλείου είναι ένδειξη που χρειάζεται χειροκίνητη επιβεβαίωση, εξουσιοδότηση και τεκμηρίωση επίπτωσης.');
+        } else if (/^(?:dig|nslookup|host)\b/i.test(c)) {
+          const short = /\+short\b/i.test(c);
+          const mx = /\bMX\b|\btype=mx\b/i.test(c);
+          const txt = /\bTXT\b|\btype=txt\b/i.test(c);
+          const record = mx ? 'MX' : txt ? 'TXT' : 'A';
+          const answer = mx ? `10 mail.${target}.` : txt ? '"v=spf1 -all"' : ip;
+          result = response(short ? answer : /^host\b/i.test(c) ?
+            mx ? `${target} mail is handled by 10 mail.${target}.` : txt ? `${target} descriptive text "v=spf1 -all"` : `${target} has address ${ip}` :
+            /^nslookup\b/i.test(c) ? mx ? `Server: 192.0.2.53\n${target} mail exchanger = 10 mail.${target}.` :
+              `Server: 192.0.2.53\nAddress: 192.0.2.53#53\n\nName: ${target}\nAddress: ${ip}` :
+            `; <<>> DiG 9.18.24 <<>> ${target}\n;; ANSWER SECTION:\n${target}.  300  IN  ${record}  ${answer}\n;; Query time: 12 msec`,
+            'Η απάντηση δείχνει την εγγραφή, τον TTL και, ανάλογα με την εντολή, τον resolver. Διακρίνετε A από MX και μη θεωρείτε την απάντηση απόδειξη ασφάλειας.');
+        } else if (/^curl\b/i.test(c)) {
+          const post = /(?:\s-X\s*POST\b|--request\s+POST\b|\s-d\s|--data\b)/i.test(c);
+          const url = c.match(/https?:\/\/[^\s'"\)]*/i)?.[0] || '';
+          const contentType = /\.txt(?:\?|$)/i.test(url) ? 'text/plain' : /\.html?(?:\?|$)/i.test(url)
+            ? 'text/html' : /\/api(?:\/|\?|$)|\.json(?:\?|$)/i.test(url) ? 'application/json' : 'text/plain';
+          const headers = `HTTP/1.1 ${post ? '201 Created' : '200 OK'}\r\ncontent-type: ${contentType}\r\nserver: nginx/1.24.0`;
+          const body = contentType === 'application/json' ? post ? '{"id":42,"status":"created"}'
+            : '{"status":"ok","service":"lab"}' : contentType === 'text/html'
+              ? '<!doctype html><html><body><h1>Lab page</h1></body></html>' : 'Hello from the lab';
+          result = response(/(?:\s-o\s+|--output\s+)/i.test(c) ? noStdout :
+            /(?:\s-I(?:\s|$)|--head\b)/i.test(c) ? headers :
+            /(?:\s-i(?:\s|$)|--include\b)/i.test(c) ? `${headers}\r\n\r\n${body}` : body,
+            'Με -I βλέπετε μόνο headers, με -i και το σώμα, ενώ με -o το σώμα αποθηκεύεται. Ο HTTP κωδικός δείχνει την έκβαση του αιτήματος, όχι την αξιοπιστία της υπηρεσίας.');
+        } else if (/^wget\b/i.test(c)) {
+          result = response(/(?:\s-q\b|--quiet\b)/.test(c) ? noStdout :
+            `--2026-03-01 12:00:00--  https://${target}/${file}\nResolving ${target} (${target})... ${ip}\nConnecting to ${target} (${ip})|${ip}|:443... connected.\nHTTP request sent, awaiting response... 200 OK\nSaving to: '${file}'\n'${file}' saved [5/5]`,
+            'Το εργαλείο αναφέρει HTTP status και αποθήκευση αρχείου. Με -q δεν τυπώνει progress, ελέγξτε το μέγεθος και το αποτύπωμα του αρχείου.');
+        } else if (/^(?:tcpdump|tshark)\b/i.test(c)) {
+          result = response(/^tshark\b/i.test(c) ?
+            `1 0.000000 ${ip} 192.0.2.20 TCP 74 51514 -> 443 [SYN]\n2 0.019830 192.0.2.20 ${ip} TCP 74 443 -> 51514 [SYN, ACK]` :
+            `12:00:00.000000 IP ${ip}.51514 > 192.0.2.20.443: Flags [S], seq 101, length 0\n12:00:00.019830 IP 192.0.2.20.443 > ${ip}.51514: Flags [S.], seq 202, ack 102, length 0`,
+            'Τα SYN και SYN-ACK είναι το ξεκίνημα μιας TCP σύνδεσης. Η καταγραφή πακέτων μόνη της δεν αποδεικνύει κακόβουλη δραστηριότητα.');
+        } else if (/^(?:ip|ifconfig)\b/i.test(c)) {
+          result = response(/\broute\b/i.test(c) ? `default via 192.0.2.1 dev eth0\n192.0.2.0/24 dev eth0 proto kernel scope link src ${ip}` :
+            /^ifconfig\b/i.test(c) ? `eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500\n        inet ${ip}  netmask 255.255.255.0  broadcast 192.0.2.255` :
+            /\blink\b/i.test(c) ? '2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP mode DEFAULT' :
+            `2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500\n    inet ${ip}/24 brd 192.0.2.255 scope global eth0`,
+            'Εντοπίστε τη διεπαφή, τη διεύθυνση με το prefix και, όπου υπάρχει, την προεπιλεγμένη διαδρομή.');
+        } else if (/^(?:ss|netstat|lsof)\b/i.test(c)) {
+          result = response(/^lsof\b/i.test(c) ? 'COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME\nsshd    1234 root    3u  IPv4  24601      0t0  TCP 127.0.0.1:22 (LISTEN)' :
+            /^netstat\b/i.test(c) ? 'Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name\ntcp        0      0 127.0.0.1:22           0.0.0.0:*               LISTEN      1234/sshd' :
+            'State  Recv-Q Send-Q Local Address:Port Peer Address:Port Process\nLISTEN 0      128    127.0.0.1:22       0.0.0.0:*       users:(("sshd",pid=1234,fd=3))',
+            'Η διεύθυνση 127.0.0.1 είναι τοπική. Συγκρίνετε τη θύρα και τη διεργασία με όσα πρέπει να είναι προσβάσιμα.');
+        } else if (/^(?:ping|traceroute|tracepath)\b/i.test(c)) {
+          const count = Math.min(4, Math.max(1, Number(c.match(/\s-c\s*(\d+)/)?.[1]) || 2));
+          result = response(/^ping\b/i.test(c) ?
+            `PING ${target} (${ip}) 56(84) bytes of data.\n${Array.from({ length: count }, (_, i) => `64 bytes from ${ip}: icmp_seq=${i + 1} ttl=64 time=${(1.2 + i * 0.2).toFixed(1)} ms`).join('\n')}\n--- ${target} ping statistics ---\n${count} packets transmitted, ${count} received, 0% packet loss` :
+            `traceroute to ${target} (${ip}), 30 hops max\n 1  192.0.2.1  1.201 ms  1.212 ms  1.232 ms\n 2  ${ip}  2.301 ms  2.340 ms  2.371 ms`,
+            'Το ping μετρά απαντήσεις ICMP και η διαδρομή εμφανίζει ενδιάμεσους κόμβους. Η απουσία απάντησης δεν αποδεικνύει ότι ο στόχος είναι εκτός λειτουργίας.');
+        } else if (/^(?:getfacl|icacls)\b/i.test(c)) {
+          result = response(/^icacls\b/i.test(c) ? `${file} LAB\\analysts:(R)\n             NT AUTHORITY\\SYSTEM:(F)\nSuccessfully processed 1 files; Failed processing 0 files` :
+            `# file: ${file}\n# owner: analyst\n# group: analysts\nuser::rw-\ngroup::r--\nother::---`,
+            'Ελέγξτε ποιος μπορεί να διαβάζει ή να γράφει. Τα effective δικαιώματα προκύπτουν από όλες τις ισχύουσες εγγραφές.');
+        } else if (/^(?:chmod|chown|setfacl|umask)\b/i.test(c)) {
+          result = response(/^umask\s*$/i.test(c) ? '0022' : /\s-v\b|--verbose/i.test(c) ?
+            `mode of '${file}' changed from 0644 (rw-r--r--) to 0640 (rw-r-----)` : noStdout,
+            'Οι περισσότερες αλλαγές δικαιωμάτων δεν τυπώνουν stdout σε επιτυχία. Επαληθεύστε το αποτέλεσμα με ls -l ή getfacl.');
+        } else if (/^(?:ls|stat|find|file)\b/i.test(c)) {
+          const fileType = /\.pcap(?:ng)?$/i.test(file) ? 'tcpdump capture file (little-endian)' :
+            /\.pem$|\.crt$|\.cer$/i.test(file) ? 'PEM certificate' :
+              /\.exe$/i.test(file) ? 'PE32+ executable (console) x86-64, for MS Windows' :
+                /\.bin$/i.test(file) ? 'data' :
+                /\.json$/i.test(file) ? 'JSON text data' : 'ASCII text, with no line terminators';
+          const statFormat = c.match(/^stat\s+.*?(?:-c|--format)(?:\s+|=)['"]([^'"]+)['"]/i)?.[1];
+          const formattedStat = statFormat && /^[0 %aUGns:./-]+$/.test(statFormat)
+            ? statFormat.replace(/%a/g, '640').replace(/%U/g, 'analyst').replace(/%G/g, 'analysts')
+              .replace(/%n/g, file).replace(/%s/g, '5') : null;
+          result = response(/^stat\b/i.test(c) ? statFormat ? formattedStat :
+            `  File: ${file}\n  Size: 5          Blocks: 8   IO Block: 4096 regular file\nAccess: (0640/-rw-r-----)  Uid: (1000/analyst)  Gid: (1000/analysts)` :
+            /^file\b/i.test(c) ? `${file}: ${fileType}` :
+            /^find\b/i.test(c) ? `./${file}\n./evidence/auth.log` :
+            /(?:\s-l|\s-la|\s-al)\b/i.test(c) ? `-rw-r----- 1 analyst analysts 5 Mar  1 12:00 ${file}` : `${file}  evidence/`,
+            'Μελετήστε το όνομα, τον τύπο, το μέγεθος ή τα δικαιώματα που ζητά η συγκεκριμένη εντολή.');
+        } else if (/^getent\b/i.test(c)) {
+          const account = c.match(/^getent\s+passwd\s+([\w-]+)\b/i)?.[1] ||
+            (/^getent\s+passwd\s*$/i.test(c) ? 'analyst' : null);
+          result = response(account === 'root'
+            ? 'root:x:0:0:root:/root:/bin/bash'
+            : account === 'analyst' ? 'analyst:x:1000:1000:Lab Analyst:/home/analyst:/bin/bash' : noStdout,
+            'Το getent αναζητά εγγραφή λογαριασμού στην ενεργή βάση ονομάτων. Το τρίτο πεδίο είναι UID και το τέταρτο GID, όχι αριθμοί δικαιωμάτων.');
+        } else if (/^(?:id|whoami|groups)\b/i.test(c)) {
+          const requestedUser = c.match(/^id\s+(?:-[ugGn]\s+)?([\w-]+)$/i)?.[1];
+          const rootUser = requestedUser === 'root';
+          result = response(requestedUser && !['root', 'analyst'].includes(requestedUser) ? noStdout :
+            rootUser ? /^id\s+-u\b/i.test(c) ? '0' : 'uid=0(root) gid=0(root) groups=0(root)' :
+            /^whoami\b/i.test(c) ? 'analyst' : /^id\s+-u\b/i.test(c) ? '1000' :
+            /^groups\b/i.test(c) ? 'analyst analysts' :
+            'uid=1000(analyst) gid=1000(analysts) groups=1000(analysts),27(sudo)',
+            'Η ταυτότητα, η πρωτεύουσα ομάδα και οι συμπληρωματικές ομάδες εξηγούν ποια δικαιώματα ισχύουν.');
+        } else if (/^(?:grep|rg|findstr)\b/i.test(c)) {
+          const matched = logResult(c, full);
+          result = matched == null
+            ? silentOutcome(c, example, file, target)
+            : matched.length
+            ? response(matched.map((line, index) => `${/^rg\b/i.test(c) ? `${file}:` : ''}${/\s-n\b/.test(c) ? `${12 + index}:` : ''}${line}`).join('\n'),
+              `Το ${c.split(/\s+/)[0]} εμφάνισε ${matched.length} γραμμές που ταιριάζουν με το ζητούμενο φίλτρο. Ο αριθμός γραμμής εμφανίζεται μόνο αν ζητήθηκε -n.`)
+            : noMatches(c, file);
+        } else if (/^(?:grep|rg|findstr|awk|sed|sort|uniq|wc|head|tail|cat|jq)\b/i.test(c)) {
+          const logFixture = /\.log\b/i.test(c) ? logResult(`grep ".*" ${file}`, c) : null;
+          const fixtureText = logFixture?.join('\n') || '';
+          const requestedLines = Math.min(10, Math.max(1, Number(c.match(/\s-n\s*(\d+)/)?.[1] || 1)));
+          result = response(/^wc\b/i.test(c) ? file === 'sample.txt'
+            ? /\s-l\b/.test(c) ? `0 ${file}` : `0 1 5 ${file}`
+            : logFixture ? /\s-l\b/.test(c) ? `${logFixture.length} ${file}`
+              : `${logFixture.length} ${fixtureText ? fixtureText.trim().split(/\s+/).length : 0} ${fixtureText.length + (fixtureText ? 1 : 0)} ${file}`
+              : noStdout :
+            /^jq\b/i.test(c) ? /\.status\b/.test(c) ? '"ok"' : '{\n  "status": "ok",\n  "service": "lab"\n}' :
+            /^cat\b/i.test(c) ? /\/etc\/passwd\b/.test(c)
+              ? 'root:x:0:0:root:/root:/bin/bash\nanalyst:x:1000:1000:Lab Analyst:/home/analyst:/bin/bash'
+              : /\.log\b/i.test(c) ? fixtureText
+                : /\.json\b/i.test(c) ? '{"status":"ok","service":"lab"}'
+                  : /sample\.txt\b/i.test(c) ? 'Hello' : noStdout :
+            /^(?:head|tail)\b/i.test(c) && logFixture
+              ? (/^tail\b/i.test(c) ? logFixture.slice(-requestedLines) : logFixture.slice(0, requestedLines)).join('\n')
+              : noStdout,
+            'Συσχετίστε τις γραμμές με την είσοδο και με τις επιλογές φιλτραρίσματος. Καμία απάντηση από grep μπορεί απλώς να σημαίνει ότι δεν βρέθηκε ταίριασμα.');
+        } else if (/^(?:ps|journalctl|ausearch|systemctl|auditctl)\b/i.test(c)) {
+          const unit = c.match(/^systemctl\s+status\s+([\w.-]+)/i)?.[1] || 'ssh.service';
+          const logUnit = c.match(/^journalctl\s+.*?-u\s+([\w.-]+)/i)?.[1];
+          const logLine = /(?:^ssh|sshd)/i.test(logUnit || '') || /\/var\/log\/auth/i.test(c)
+            ? 'Mar  1 12:00:00 lab sshd[1234]: Failed password for invalid user guest from 192.0.2.42 port 51024 ssh2'
+            : logUnit ? `Mar  1 12:00:00 lab ${logUnit}[1234]: Started ${logUnit}.` : null;
+          result = response(/^ps\b/i.test(c) ? '  PID USER     COMMAND\n 1234 analyst  sshd\n 1302 root     nginx' :
+            /^systemctl\s+(?:start|stop|restart|enable|disable)\b/i.test(c) ? noStdout :
+            /^systemctl\s+status\b/i.test(c) ? `● ${unit} - Lab service\n     Loaded: loaded (/lib/systemd/system/${unit}; enabled)\n     Active: active (running) since Sun 2026-03-01 12:00:00 UTC` :
+            /^systemctl\b/i.test(c) ? noStdout :
+            /^journalctl\b/i.test(c) ? logLine : noStdout,
+            'Οι καταγραφές περιλαμβάνουν χρόνο, διεργασία και γεγονός. Μετά από αλλαγή υπηρεσίας ελέγξτε ξανά το status της.');
+        } else if (/^(?:ufw|iptables|nft|firewall-cmd)\b/i.test(c)) {
+          result = response(/^ufw\s+status\b/i.test(c) ? 'Status: active\nTo                         Action      From\n--                         ------      ----\n22/tcp                     ALLOW       192.0.2.0/24\n443/tcp                    ALLOW       Anywhere' :
+            /^iptables\s+-L\b/i.test(c) ? 'Chain INPUT (policy DROP)\ntarget     prot opt source             destination\nACCEPT     tcp  --  192.0.2.0/24       anywhere      tcp dpt:ssh' :
+            /^nft\s+list\b/i.test(c) ? 'table inet filter {\n  chain input {\n    type filter hook input priority filter; policy drop;\n    tcp dport { 22, 443 } accept\n  }\n}' :
+            /^firewall-cmd\s+--list/i.test(c) ? 'public (active)\n  interfaces: eth0\n  services: ssh https' : noStdout,
+            'Ελέγξτε την επιτρεπόμενη πηγή, θύρα και προεπιλεγμένη πολιτική. Σε εντολή αλλαγής επιβεβαιώστε ότι ο κανόνας πράγματι εφαρμόστηκε.');
+        } else if (/^(?:yara|clamscan)\b/i.test(c)) {
+          const flagged = /malware|eicar|infected/i.test(file);
+          result = response(/^clamscan\b/i.test(c) ? `${file}: ${flagged ? 'Eicar-Test-Signature FOUND' : 'OK'}\n\n----------- SCAN SUMMARY -----------\nInfected files: ${flagged ? 1 : 0}` :
+            /\blab\.rules?\b/i.test(c) && /\bsample\.bin\b/i.test(c) ? `LabRule ${file}` : noStdout,
+            'Η σάρωση ή ο κανόνας αφορά αποκλειστικά το αρχείο της εντολής. Ένα match χρειάζεται επιβεβαίωση και δεν αποδίδει αυτόματα δράστη.');
+        } else if (/^(?:volatility|vol|strings|xxd|hexdump|exiftool|binwalk)\b/i.test(c)) {
+          result = response(/^(?:volatility|vol)\b/i.test(c) ? /netscan/i.test(c) ?
+            'Offset          Proto LocalAddr       ForeignAddr       State       PID Owner\n0x01af3400      TCPv4 192.0.2.10:51514 192.0.2.20:443  ESTABLISHED 1234 chrome.exe' :
+            'PID   PPID  ImageFileName\n4     0     System\n1234  500   explorer.exe' :
+            /^exiftool\b/i.test(c) ? `File Name                       : ${file}\nFile Size                       : 5 bytes\nFile Modification Date/Time     : 2026:03:01 12:00:00+00:00` :
+            /^(?:xxd|hexdump)\b/i.test(c) ? '00000000: 4865 6c6c 6f                             Hello' :
+            /^strings\b/i.test(c) ? 'Hello\nhttps://lab.example/api' :
+            'DECIMAL       HEXADECIMAL     DESCRIPTION\n0             0x0             gzip compressed data',
+            'Η μνήμη, τα μεταδεδομένα και τα bytes απαιτούν συσχέτιση με το σωστό πειστήριο και καταγραφή αλυσίδας φύλαξης.');
+        } else if (/^(?:ssh|ssh-keygen|whois|nc|netcat|ncat|socat|getent|last|lastb|hostname|hostnamectl)\b/i.test(c)) {
+          const fingerprint = btoa(String.fromCharCode(...digest.sha256.match(/.{2}/g)
+            .map(part => parseInt(part, 16)))).replace(/=+$/, '');
+          const keyType = /\s-t\s+ed25519\b/i.test(c) ? 'ed25519' : 'rsa';
+          const requestedPort = c.match(/(?:\s-p\s*|\s+)(\d{2,5})(?:\s|$)/)?.[1] || '443';
+          result = response(/^ssh-keygen\s+-lf\b/i.test(c) ? `${keyType === 'ed25519' ? 256 : 3072} SHA256:${fingerprint} analyst@lab (${keyType.toUpperCase()})` :
+            /^ssh-keygen\b/i.test(c) ? `Generating public/private ${keyType} key pair.\nYour identification has been saved in /home/analyst/.ssh/id_${keyType}\nYour public key has been saved in /home/analyst/.ssh/id_${keyType}.pub` :
+            /^ssh\b/i.test(c) ? `Last login: Sun Mar  1 12:00:00 2026 from 192.0.2.42\nanalyst@${target}:~$` :
+            /^whois\b/i.test(c) ? target === 'lab.example' ? 'No match for domain "LAB.EXAMPLE".' :
+              `Domain Name: ${target.toUpperCase()}\nRegistrar: RESERVED-INTERNET ASSIGNED NUMBERS AUTHORITY\nUpdated Date: 2026-03-01T00:00:00Z` :
+            /^(?:nc|netcat|ncat|socat)\b/i.test(c) ? /\s-l\b/i.test(c) ? noStdout :
+              `Connection to ${target} (${ip}) ${requestedPort} port [tcp/${requestedPort === '443' ? 'https' : requestedPort === '22' ? 'ssh' : 'unknown'}] succeeded!` :
+            /^getent\b/i.test(c) ? 'analyst:x:1000:1000:Lab Analyst:/home/analyst:/bin/bash' :
+            /^lastb?\b/i.test(c) ? 'analyst  pts/0   192.0.2.42   Sun Mar  1 12:00   still logged in' :
+            /^hostnamectl\b/i.test(c) ? ' Static hostname: lab\n Operating System: Debian GNU/Linux 12\n Kernel: Linux 6.1.0-amd64' : 'lab',
+            'Ελέγξτε αν η σύνδεση, η ταυτότητα ή η αναζήτηση αντιστοιχεί στον επιτρεπόμενο στόχο. Η επιτυχία σύνδεσης δεν εξασφαλίζει έλεγχο ταυτότητας δεδομένων.');
+        } else if (/^(?:net|netsh|certutil|wevtutil|tasklist|schtasks|auditpol|sc\.exe)\b/i.test(c)) {
+          result = response(/^net\s+user\b/i.test(c) ? 'User accounts for \\LAB\n\nAdministrator    analyst    Guest\nThe command completed successfully.' :
+            /^netsh\s+advfirewall\s+show\b/i.test(c) ? 'Domain Profile Settings:\nState                                 ON\nFirewall Policy                       BlockInbound,AllowOutbound' :
+            /^certutil\s+-hashfile\b/i.test(c) ? `SHA256 hash of ${file}:\n${digest.sha256.toUpperCase()}\nCertUtil: -hashfile command completed successfully.` :
+            /^wevtutil\b/i.test(c) ? 'Event[0]:\n  Log Name: Security\n  Source: Microsoft-Windows-Security-Auditing\n  Event ID: 4625\n  Level: Information' :
+            /^tasklist\b/i.test(c) ? 'Image Name                     PID Session Name        Mem Usage\n========================= ======== ================ ============\nsvchost.exe                   1234 Services            19,824 K' :
+            /^schtasks\s+\/query\b/i.test(c) ? 'TaskName                              Next Run Time          Status\n\\Lab\\DailyAudit                      3/2/2026 12:00:00 AM   Ready' :
+            /^auditpol\s+\/get\b/i.test(c) ? 'System audit policy\nCategory/Subcategory                      Setting\nLogon/Logoff / Logon                     Success and Failure' :
+            /^sc\.exe\s+query\b/i.test(c) ? 'SERVICE_NAME: WinDefend\n        TYPE               : 10  WIN32_OWN_PROCESS\n        STATE              : 4  RUNNING' : noStdout,
+            'Τα πεδία των Windows δείχνουν την τρέχουσα κατάσταση. Για εντολές αλλαγής εκτελέστε ξανά ερώτημα επαλήθευσης.');
+        } else if (/^(?:SELECT|SHOW|DESCRIBE)\b/i.test(c)) {
+          result = response(/^SELECT\b/i.test(c) ? '+----+--------+\n| id | status |\n+----+--------+\n|  1 | active |\n+----+--------+\n1 row in set (0.00 sec)' :
+            '+----------------+\n| Tables_in_lab  |\n+----------------+\n| events         |\n+----------------+',
+            'Οι γραμμές είναι δεδομένα του παραδείγματος. Η διαθεσιμότητα και η ορατότητά τους εξαρτώνται από το ερώτημα και τα δικαιώματα.');
+        } else if (/^(?:Get-|Set-|New-|Test-|pwsh|powershell)\b/i.test(c)) {
+          const port = c.match(/(?:-Port\s+|\s-p\s+)(\d{2,5})/i)?.[1] || '443';
+          const serviceName = c.match(/^Get-Service(?:\s+-Name)?\s+([\w-]+)/i)?.[1] || 'WinDefend';
+          const account = c.match(/^Get-LocalUser(?:\s+-Name)?\s+([\w-]+)/i)?.[1];
+          result = response(/^Test-NetConnection\b/i.test(c) ? `ComputerName     : ${target}\nRemoteAddress    : ${ip}\nRemotePort       : ${port}\nTcpTestSucceeded : True` :
+            /^Test-Path\b/i.test(c) ? 'True' :
+            /^Get-Service\b/i.test(c) ? `Status   Name               DisplayName\n------   ----               -----------\nRunning  ${serviceName.padEnd(18)} ${serviceName === 'WinDefend' ? 'Microsoft Defender Antivirus Service' : 'Lab service'}` :
+            /^Get-LocalUser\b/i.test(c) ? `Name           Enabled Description\n----           ------- -----------\n${(account || 'Administrator').padEnd(14)} ${account ? 'True ' : 'False'}   Local account` :
+            /^Get-Process\b/i.test(c) ? 'Handles  NPM(K)    PM(K)      WS(K)     CPU(s)   Id  ProcessName\n    146      12    18240      34100       0.39 1234  powershell' :
+            /^Get-Content\b/i.test(c) ? 'Mar  1 12:00:00 lab sshd[1234]: Accepted publickey for analyst' :
+            /^Get-WinEvent\b/i.test(c) ? 'TimeCreated           Id LevelDisplayName Message\n-----------           -- ---------------- -------\n3/1/2026 12:00:00 PM 4625 Information     An account failed to log on.' :
+            /^Get-NetFirewallRule\b/i.test(c) ? `Name        : ${c.match(/-DisplayName\s+["']?([^\s"']+)/i)?.[1] || 'Allow-Lab-HTTPS'}\nEnabled     : True\nDirection   : Inbound\nAction      : Allow` :
+            /^Invoke-(?:WebRequest|RestMethod)\b/i.test(c) ? '{"status":"ok","service":"lab"}' :
+            /^(?:Set-|New-|pwsh|powershell)\b/i.test(c) ? noStdout :
+            /^Get-Acl\b/i.test(c) ? 'Path      : C:\\Lab\\sample.txt\nOwner     : LAB\\analysts\nAccess    : LAB\\analysts Allow  Read' :
+            'Name    : lab-object\nStatus  : Enabled',
+            'Στο PowerShell οι εμφανιζόμενες στήλες είναι ιδιότητες αντικειμένων. Σε εντολές αλλαγής ελέγξτε την πραγματική κατάσταση μετά την εκτέλεση.');
+        } else if (/^(?:git|docker|kubectl)\b/i.test(c)) {
+          result = response(/^git\s+status\b/i.test(c) ? 'On branch main\nnothing to commit, working tree clean' :
+            /^git\s+log\b/i.test(c) ? 'commit 6d7a9bf (HEAD -> main)\nAuthor: Lab Analyst <analyst@lab.example>\nDate:   Sun Mar 1 12:00:00 2026 +0000\n\n    Add lab notes' :
+            /^git\s+diff\b/i.test(c) ? noStdout :
+            /^git\s+add\b/i.test(c) ? noStdout :
+            /^git\s+commit\b/i.test(c) ? '[main 6d7a9bf] Add lab notes\n 1 file changed, 2 insertions(+)' :
+            /^git\s+show\b/i.test(c) ? 'commit 6d7a9bf (HEAD -> main)\n    Add lab notes' :
+            /^docker\s+ps\b/i.test(c) ? 'CONTAINER ID   IMAGE        COMMAND        STATUS          PORTS\n3a9d7c2f1b44   lab:latest   "./start.sh"   Up 2 minutes    127.0.0.1:8080->80/tcp' :
+            /^docker\s+inspect\b/i.test(c) && /lab-api|3a9d7c2f1b44/.test(c) ? '[{"Name":"/lab-api","State":{"Status":"running"}}]' :
+            /^kubectl\s+get\b/i.test(c) ? 'NAME                       READY   STATUS    RESTARTS   AGE\nlab-api-7c55b67f98-x4d2h   1/1     Running   0          2m' :
+            /^kubectl\s+apply\b/i.test(c) && /lab-api/.test(c) ? 'deployment.apps/lab-api configured' : noStdout,
+            'Διακρίνετε αλλαγή κατάστασης από επιτυχή εκτέλεση. Ελέγξτε το σωστό αποθετήριο, namespace ή περιβάλλον container.');
+        } else if (/^(?:python3?|node|bash|sh)\b/i.test(c)) {
+          const literal = full.match(/(?:print|console\.log)\(\s*['"]([^'"\n]+)['"]\s*\)/);
+          result = response(literal ? literal[1] : /(?:\s-V\b|--version\b)/i.test(c) ?
+            /^node\b/i.test(c) ? 'v22.12.0' : 'Python 3.12.3' : noStdout,
+            'Η έξοδος εξαρτάται από τον κώδικα και τα δεδομένα που τροφοδοτούν το script. Μην ερμηνεύετε τον κωδικό εξόδου ως επιβεβαίωση του αποτελέσματος ασφάλειας.');
+        } else if (/^(?:echo|printf)\b/i.test(c)) {
+          const message = c.match(/['"]([^'"\n]*)['"]/)?.[1] || c.replace(/^(?:echo|printf)(?:\s+-n|\s+%s)?\s*/i, '');
+          result = response(/[>|]\s*/.test(c) ? noStdout : message.replace(/\\n/g, '\n') || 'Hello',
+            'Η έξοδος αποτελεί τα δεδομένα εισόδου της επόμενης εντολής ή του αρχείου. Η echo συνήθως προσθέτει newline ενώ η printf όχι απαραίτητα.');
+        } else if (/^(?:date|uname|df|du|mount|tar|unzip)\b/i.test(c)) {
+          result = response(/^date\b/i.test(c) ? 'Sun Mar  1 12:00:00 UTC 2026' :
+            /^uname\b/i.test(c) ? 'Linux lab 6.8.0-generic #1 SMP x86_64 GNU/Linux' :
+            /^df\b/i.test(c) ? 'Filesystem      Size  Used Avail Use% Mounted on\n/dev/sda1        20G  6.0G   13G  32% /' :
+            /^du\b/i.test(c) ? `4.0K    ${file}` :
+            /^mount\b/i.test(c) ? '/dev/sda1 on / type ext4 (rw,relatime)' :
+            /^tar\s+-[^\s]*t/i.test(c) ? 'notes.txt\nsample.txt' :
+            /^unzip\s+-l/i.test(c) ? '  Length      Date    Time    Name\n---------  ---------- -----   ----\n        5  2026-03-01 12:00   sample.txt\n---------                     -------\n        5                     1 file' : noStdout,
+            'Σημειώστε τις πληροφορίες συστήματος ή τα αρχεία που αναφέρει η εντολή και επαληθεύστε τυχόν αλλαγές στον δίσκο.');
+        } else if (commandPattern.test(c) || /^\.\//.test(c)) {
+          result = response(noStdout, 'Η έκβαση της συγκεκριμένης εντολής δεν δίνει προβλέψιμο stdout χωρίς τα πραγματικά δεδομένα εισόδου της άσκησης.');
+        } else {
+          result = response(noStdout, 'Το αποτέλεσμα του αποσπάσματος εξαρτάται από την εφαρμογή που το χρησιμοποιεί.');
+        }
+        if (result.output == null || result.output === '') {
+          result = silentOutcome(full, example, file, target);
+        }
+        const invocation = full !== c
+          ? `${describeInvocation(full.split(/\s+\|\s+/)[0], example)} Ο | περνά το αποτέλεσμα στο ${c.split(/\s+/)[0]}. ${describeInvocation(c, example)}`
+          : describeInvocation(c, example);
+        return { command, sourceLine, ...result, invocation,
+          details: interpret(c, result.output, result.explanation) };
+      });
+    }
+
+    function startOutputSimulator(catalog, simulate, commandPattern) {
+      const root = document.getElementById('root');
+      if (!root) return;
+
+      const cleanPunctuation = text => String(text).replace(/[ \t]*\u00b7[ \t]*/g, ', ');
+      function cleanSlideText() {
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (node.nodeValue.includes('\u00b7')) node.nodeValue = cleanPunctuation(node.nodeValue);
+        }
+        root.querySelectorAll('[title],[aria-label],[placeholder],[alt]').forEach(element => {
+          for (const name of ['title', 'aria-label', 'placeholder', 'alt']) {
+            const value = element.getAttribute(name);
+            if (value?.includes('\u00b7')) element.setAttribute(name, cleanPunctuation(value));
+          }
+        });
+        if (document.title.includes('\u00b7')) document.title = cleanPunctuation(document.title);
+      }
+
+      const style = document.createElement('style');
+      style.textContent = `
+        #sim-toggle, #sim-panel { --sim-accent:#22d3ee; font-family:"Segoe UI","Noto Sans",Arial,sans-serif; }
+        #sim-toggle { position:fixed; top:50%; right:0; z-index:99998; transform:translateY(-50%);
+          border:1px solid var(--sim-accent); border-right:0; border-radius:12px 0 0 12px;
+          background:#0d2031; color:#f0fbff; padding:14px 17px; font-size:14px;
+          font-weight:800; box-shadow:0 12px 35px #0008; cursor:pointer; }
+        #sim-toggle[hidden] { display:none; }
+        #sim-toggle:hover, #sim-toggle:focus-visible { background:#18364b; outline:2px solid var(--sim-accent); outline-offset:2px; }
+        #sim-panel { position:fixed; z-index:99999; top:0; right:0; width:min(600px,42vw);
+          height:100dvh; display:flex; flex-direction:column; color:#e8f1fc;
+          background:linear-gradient(165deg,#0c192a 0%,#081321 48%,#07101d 100%);
+          border-left:1px solid #ffffff24; box-shadow:-20px 0 65px #000a;
+          transform:translateX(102%); transition:transform .32s cubic-bezier(.2,.8,.2,1); user-select:text; }
+        #sim-panel.is-open { transform:translateX(0); }
+        body.sim-open .deck-wrap:not(:fullscreen) { right:min(600px,42vw); transition:right .32s cubic-bezier(.2,.8,.2,1); }
+        #sim-panel * { box-sizing:border-box; }
+        #sim-panel button { font:inherit; cursor:pointer; }
+        #sim-panel .sim-menu, #sim-panel .sim-body, #sim-panel pre {
+          scrollbar-width:thin; scrollbar-color:var(--sim-accent) #111f30; }
+        #sim-panel .sim-menu::-webkit-scrollbar, #sim-panel .sim-body::-webkit-scrollbar,
+        #sim-panel pre::-webkit-scrollbar { width:9px; height:9px; }
+        #sim-panel .sim-menu::-webkit-scrollbar-track, #sim-panel .sim-body::-webkit-scrollbar-track,
+        #sim-panel pre::-webkit-scrollbar-track { background:#111f30; }
+        #sim-panel .sim-menu::-webkit-scrollbar-thumb, #sim-panel .sim-body::-webkit-scrollbar-thumb,
+        #sim-panel pre::-webkit-scrollbar-thumb { background:var(--sim-accent); border:2px solid #111f30; border-radius:20px; }
+        .sim-head { flex:none; padding:23px 26px 20px; border-bottom:1px solid #ffffff20; }
+        .sim-head-top { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+        .sim-eyebrow { color:var(--sim-accent); font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+        .sim-head h2 { color:#fff; font-size:24px; line-height:1.16; margin:9px 0 8px; }
+        .sim-chapter { display:block; color:#aabbcf; font-size:13px; line-height:1.5; }
+        .sim-close { color:#eef6ff; background:#ffffff0d; border:1px solid #ffffff36;
+          border-radius:9px; width:38px; height:38px; font-size:23px !important; flex:none; }
+        .sim-close:hover, .sim-close:focus-visible { border-color:var(--sim-accent); color:#fff; outline:none; }
+        .sim-nav { flex:none; border-bottom:1px solid #ffffff20; padding:15px 26px 17px; }
+        .sim-nav-heading { display:flex; justify-content:space-between; gap:12px; align-items:baseline;
+          color:#9db0c8; font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; margin-bottom:10px; }
+        .sim-nav-heading span:last-child { color:var(--sim-accent); font-variant-numeric:tabular-nums; }
+        .sim-menu { max-height:min(32dvh,256px); overflow:auto; overscroll-behavior:contain; }
+        .sim-menu ol { list-style:none; margin:0; padding:0; }
+        .sim-menu li + li { border-top:1px solid #ffffff18; }
+        .sim-menu button { display:grid; grid-template-columns:72px minmax(0,1fr); align-items:center;
+          gap:12px; width:100%; min-height:50px; border:0; border-left:3px solid transparent;
+          background:transparent; color:#dbe6f4; text-align:left; padding:9px 10px; transition:background .2s,border-color .2s; }
+        .sim-menu button:hover { background:#ffffff0c; }
+        .sim-menu button:focus-visible { outline:2px solid var(--sim-accent); outline-offset:-2px; }
+        .sim-menu button.is-current { background:color-mix(in srgb,var(--sim-accent) 13%,#091a29);
+          border-left-color:var(--sim-accent); }
+        .sim-item-number { color:var(--sim-accent); font-size:12px; font-weight:800; font-variant-numeric:tabular-nums; white-space:nowrap; }
+        .sim-item-title { color:#e6f0fa; font-size:13px; line-height:1.35; font-weight:600; overflow-wrap:anywhere; }
+        .sim-body { flex:1; min-height:0; overflow:auto; padding:26px; scroll-behavior:smooth; overscroll-behavior:contain; }
+        .sim-current-label { color:var(--sim-accent); text-transform:uppercase; letter-spacing:.1em; font-size:12px; font-weight:800; }
+        .sim-name { color:#fff; font-size:21px; font-weight:800; line-height:1.3; margin:8px 0 10px; }
+        .sim-note { color:#b8c8da; font-size:14px; line-height:1.55; margin:0 0 25px; }
+        .sim-invocation { color:#dce8f6; font-size:14px; line-height:1.6; margin:10px 0 19px; }
+        .sim-label { color:var(--sim-accent); font-size:11px; font-weight:800; text-transform:uppercase;
+          letter-spacing:.12em; margin:22px 0 9px; }
+        .sim-code, .sim-output { white-space:pre-wrap; overflow-wrap:anywhere; overflow:auto; margin:0; padding:17px 18px;
+          border-radius:9px; font:13px/1.65 "Noto Sans Mono",Consolas,monospace; }
+        .sim-code { background:#030c17; color:#d8e9f5; border:1px solid #ffffff24; }
+        .sim-output { background:#082019; color:#c5f4dc; border:1px solid #32d39950; border-left:3px solid #34d399; }
+        .sim-explain { color:#dce8f6; font-size:14px; line-height:1.6; margin:15px 0 23px; }
+        .sim-step { border-top:1px solid #ffffff30; padding-top:10px; margin-top:30px; }
+        .sim-step:first-of-type { margin-top:22px; }
+        .sim-details { margin:10px 0 26px; display:grid; gap:13px; }
+        .sim-details div { padding-left:13px; border-left:2px solid var(--sim-accent); }
+        .sim-details dt { color:#c3e9f1; font:600 13px/1.5 "Noto Sans Mono",Consolas,monospace; overflow-wrap:anywhere; }
+        .sim-details dd { color:#c9d8e8; margin:3px 0 0; font-size:14px; line-height:1.55; }
+        .sim-in { animation:simIn .35s ease-out both; }
+        @keyframes simIn { from {opacity:0; transform:translateY(9px)} to {opacity:1; transform:translateY(0)} }
+        @media (max-width:900px) {
+          #sim-panel { width:100vw; border-left:0; }
+          body.sim-open .deck-wrap:not(:fullscreen) { right:0; }
+          #sim-toggle { top:auto; bottom:68px; right:10px; transform:none; border-radius:10px; border-right:1px solid var(--sim-accent); }
+          .sim-head { padding:17px 20px 14px; }
+          .sim-nav { padding:11px 20px 12px; }
+          .sim-menu { max-height:min(28dvh,220px); }
+          .sim-body { padding:18px 20px; }
+        }
+        @media (prefers-reduced-motion:reduce) {
+          #sim-panel, body.sim-open .deck-wrap:not(:fullscreen) { transition:none; }
+          .sim-in { animation:none; }
+        }
+      `;
+      document.head.append(style);
+
+      const element = (tag, className, text, parent) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = cleanPunctuation(text);
+        if (parent) parent.append(node);
+        return node;
+      };
+      const toggle = element('button', '', 'Έξοδος / απόκριση', document.body);
+      toggle.id = 'sim-toggle';
+      toggle.hidden = true;
+      toggle.setAttribute('aria-controls', 'sim-panel');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.type = 'button';
+      const panel = element('aside', '', undefined, document.body);
+      panel.id = 'sim-panel';
+      panel.setAttribute('aria-label', 'Προσομοιωτής εξόδου εντολών');
+      panel.setAttribute('aria-hidden', 'true');
+      panel.inert = true;
+      const head = element('header', 'sim-head', undefined, panel);
+      const headTop = element('div', 'sim-head-top', undefined, head);
+      const intro = element('div', '', undefined, headTop);
+      element('div', 'sim-eyebrow', 'ΕΚΠΑΙΔΕΥΤΙΚΑ ΠΑΡΑΔΕΙΓΜΑΤΑ OUTPUT', intro);
+      element('h2', '', 'Αποτέλεσμα εντολής', intro);
+      const chapterLabel = element('span', 'sim-chapter', '', intro);
+      const close = element('button', 'sim-close', '×', headTop);
+      close.type = 'button';
+      close.setAttribute('aria-label', 'Κλείσιμο προσομοιωτή');
+      const nav = element('nav', 'sim-nav', undefined, panel);
+      nav.setAttribute('aria-label', 'Λίστα ασκήσεων και παραδειγμάτων');
+      const navHeading = element('div', 'sim-nav-heading', undefined, nav);
+      const navTitle = element('span', '', 'Ασκήσεις', navHeading);
+      const navCount = element('span', '', '', navHeading);
+      const menu = element('div', 'sim-menu', undefined, nav);
+      const list = element('ol', '', undefined, menu);
+      const body = element('div', 'sim-body', undefined, panel);
+
+      let active = [];
+      let selected = 0;
+      let signature = '';
+      let scheduled = false;
+      let menuSignature = '';
+      let menuButtons = [];
+      const fit = () => {
+        window.dispatchEvent(new Event('resize'));
+        window.setTimeout(() => window.dispatchEvent(new Event('resize')), 340);
+      };
+      const open = (value) => {
+        const show = value && active.length > 0;
+        panel.classList.toggle('is-open', show);
+        panel.setAttribute('aria-hidden', String(!show));
+        panel.inert = !show;
+        document.body.classList.toggle('sim-open', show);
+        toggle.setAttribute('aria-expanded', String(show));
+        toggle.hidden = show || !active.length;
+        fit();
+      };
+
+      function render(animate = true) {
+        const example = active[selected];
+        if (!example) return;
+        const taskList = active.every(item => item.type === 'cli');
+        const nextMenuSignature = active.map(item => item.id).join('|');
+        nav.hidden = active.length <= 1;
+        navTitle.textContent = taskList ? 'Εργαστήριο CLI' : 'Παραδείγματα';
+        navCount.textContent = taskList ? `${active.length} tasks` : `${active.length} παραδείγματα`;
+        if (nextMenuSignature !== menuSignature) {
+          menuSignature = nextMenuSignature;
+          list.replaceChildren();
+          menuButtons = active.map((item, index) => {
+            const row = element('li', '', undefined, list);
+            const button = element('button', '', undefined, row);
+            button.type = 'button';
+            const label = item.type === 'cli' ? `Task ${item.taskNumber}` : String(index + 1).padStart(2, '0');
+            element('span', 'sim-item-number', label, button);
+            element('span', 'sim-item-title', item.title, button);
+            button.setAttribute('aria-label', `${label}: ${item.title}`);
+            button.addEventListener('click', () => { selected = index; render(); });
+            button.addEventListener('keydown', event => {
+              if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+              event.preventDefault();
+              selected = (index + (event.key === 'ArrowDown' ? 1 : -1) + active.length) % active.length;
+              render();
+              menuButtons[selected].focus();
+            });
+            return button;
+          });
+        }
+        menuButtons.forEach((button, index) => {
+          button.classList.toggle('is-current', index === selected);
+          if (index === selected) button.setAttribute('aria-current', 'true');
+          else button.removeAttribute('aria-current');
+        });
+        if (!nav.hidden && panel.classList.contains('is-open')) menuButtons[selected]?.scrollIntoView({ block:'nearest' });
+        body.replaceChildren();
+        if (animate) body.classList.remove('sim-in');
+        element('div', 'sim-current-label', example.type === 'cli' ? `Task ${example.taskNumber}` : 'Παράδειγμα', body);
+        element('h3', 'sim-name', example.title, body);
+        const steps = simulate(example.cmd, example, commandPattern);
+        if (example.type !== 'cli') {
+          element('p', 'sim-note', example.lesson || steps[0]?.details?.[0]?.meaning || steps[0]?.explanation, body);
+        }
+        steps.forEach((step, index) => {
+          const group = element('div', 'sim-step', undefined, body);
+          element('div', 'sim-label', steps.length > 1 ? `Εντολή ${index + 1}` : 'Εντολή / απόσπασμα', group);
+          element('pre', 'sim-code', step.command, group);
+          element('div', 'sim-label', 'Τι κάνει και τι σημαίνουν οι παράμετροι', group);
+          element('p', 'sim-invocation', step.invocation, group);
+          element('div', 'sim-label', step.kind === 'rule'
+            ? 'Ενδεικτικός κανόνας YARA και match (EN)'
+            : step.kind === 'summary' ? 'Ενδεικτική σύνοψη αποτελέσματος (EN)'
+              : step.kind === 'artifact' ? 'Ενδεικτικό παραγόμενο αποτέλεσμα (EN)'
+                : 'Ενδεικτικό output της εντολής (EN)', group);
+          element('pre', 'sim-output', step.output, group);
+          element('div', 'sim-label', 'Πώς διαβάζουμε το αποτέλεσμα', group);
+          const details = element('dl', 'sim-details', undefined, group);
+          step.details.forEach(detail => {
+            const row = element('div', '', undefined, details);
+            element('dt', '', detail.fragment, row);
+            element('dd', '', detail.meaning, row);
+          });
+        });
+        body.scrollTop = 0;
+        if (animate) { void body.offsetWidth; body.classList.add('sim-in'); }
+      }
+
+      const normalize = text => cleanPunctuation(text).trim().replace(/\r\n/g, '\n').replace(/\s+/g, ' ');
+      function update() {
+        scheduled = false;
+        cleanSlideText();
+        const host = document.fullscreenElement || document.body;
+        if (panel.parentNode !== host || toggle.parentNode !== host) host.append(toggle, panel);
+        const stage = document.querySelector('#root .stage');
+        const accent = stage ? getComputedStyle(stage).getPropertyValue('--a').trim() : '';
+        if (accent) { panel.style.setProperty('--sim-accent', accent); toggle.style.setProperty('--sim-accent', accent); }
+        const text = stage?.querySelector('.fh-ch')?.textContent || stage?.querySelector('.cover-no')?.textContent || '';
+        const ci = (Number(text.match(/(?:Κεφ\.|ΚΕΦΑΛΑΙΟ)\s*0*(\d+)/i)?.[1]) || 0) - 1;
+        if (ci < 0 || !catalog[ci]) {
+          if (active.length) { active = []; signature = ''; open(false); }
+          return;
+        }
+        const items = [];
+        const used = new Set();
+        const register = (example) => {
+          if (example && !used.has(example.id)) { items.push(example); used.add(example.id); }
+        };
+        const entries = catalog[ci].examples;
+        const introTerminal = stage.querySelector('.terminal div.term-body');
+        const showingCli = Boolean(introTerminal || stage.querySelector('.terminal pre.term-body'));
+        if (showingCli) entries.filter(item => item.type === 'cli').forEach(register);
+        let visibleTaskId = null;
+        const blocks = stage.querySelectorAll('.terminal pre.term-body, pre.term-pre');
+        blocks.forEach((block, index) => {
+          const code = block.textContent.trim();
+          if (!code) return;
+          const found = entries.find(item => normalize(item.cmd) === normalize(code));
+          if (showingCli && block.matches('.terminal pre.term-body')) {
+            if (found?.type === 'cli' && !visibleTaskId) visibleTaskId = found.id;
+            return;
+          }
+          const first = code.split(/\r?\n/).map(line => line.trim()).find(line =>
+            commandPattern.test(line.replace(/^[\w.-]+@[\w.-]+(?::[^\s$#]*)?[$#]\s*/, '$ '))) || code;
+          const name = first.replace(/^[\w.-]+@[\w.-]+(?::[^\s$#]*)?[$#]\s*/, '')
+            .replace(/^PS\s+[^>]*>\s*/i, '').replace(/^(?:\$\s*|#\s*|sudo\s+)+/i, '').split(/[\s|;]/)[0];
+          const context = stage.querySelector('.ff-l')?.textContent || catalog[ci].title;
+          const reading = simulate(code, { chapterNumber: ci + 1, topic: catalog[ci].topic, context }, commandPattern)[0];
+          register(found || { id: `visible-${ci}-${index}`, type: 'visible', cmd: code,
+            title: `Πώς διαβάζουμε την έξοδο: ${name || 'απόσπασμα'}`,
+            chapterNumber: ci + 1, topic: catalog[ci].topic, context,
+            lesson: reading?.details?.[0]?.meaning || reading?.explanation });
+        });
+        if (showingCli && !visibleTaskId) {
+          const badge = [...stage.querySelectorAll('.pill-solid')]
+            .map(node => Number(node.textContent.match(/Task\s*(\d+)/i)?.[1]))
+            .find(Number.isFinite);
+          visibleTaskId = entries.find(item => item.type === 'cli' && item.taskNumber === badge)?.id || null;
+        }
+        stage.querySelectorAll('.ic').forEach((code, index) => {
+          const found = entries.find(item => item.type === 'inline' && normalize(item.cmd) === normalize(code.textContent));
+          if (found) register(found);
+        });
+        if (!blocks.length && !introTerminal && stage.querySelector('.terminal .term-body')) {
+          const code = stage.querySelector('.terminal .term-body').textContent.trim();
+          if (code) {
+            const reading = simulate(code, { chapterNumber: ci + 1, topic: catalog[ci].topic }, commandPattern)[0];
+            register({ id: `terminal-${ci}`, title: 'Ανάγνωση απόκρισης τερματικού',
+              cmd: code, chapterNumber: ci + 1, topic: catalog[ci].topic,
+              lesson: reading?.details?.[0]?.meaning || reading?.explanation });
+          }
+        }
+        const slide = stage.querySelector('.frame-foot .ff-r')?.textContent || '';
+        const nextSignature = `${ci}:${slide}:${items.map(item => item.id).join('|')}`;
+        if (nextSignature === signature) return;
+        signature = nextSignature;
+        active = items;
+        selected = Math.max(0, active.findIndex(item => item.id === visibleTaskId));
+        chapterLabel.textContent = cleanPunctuation(catalog[ci].title);
+        if (items.length) {
+          toggle.textContent = `Output / εξήγηση, ${items.length}`;
+          render(false);
+          open(false);
+        } else {
+          open(false);
+        }
+      }
+
+      const schedule = () => {
+        if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+      };
+      const observer = new MutationObserver(schedule);
+      observer.observe(root, { childList: true, subtree: true, characterData: true });
+      toggle.addEventListener('click', () => open(true));
+      close.addEventListener('click', () => open(false));
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && panel.classList.contains('is-open')) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          open(false);
+        }
+      }, true);
+      document.addEventListener('fullscreenchange', () => {
+        (document.fullscreenElement || document.body).append(toggle, panel);
+        schedule();
+      });
+      schedule();
+    }
+
     // Each chapter is a literal in the upstream bundle. Replace only its own arrays before the module executes.
     function questionArraySpan(source, from, to, key) {
       const pattern = new RegExp('(?:,|\\{)\\s*(?:"' + key + '"|' + key + ')\\s*:\\s*\\[', 'g');
@@ -356,7 +1674,7 @@
       throw new Error(`Ατελές πεδίο ${key} στο αρχικό αρχείο.`);
     }
 
-    function correctPresentation(source, chapters, verified) {
+    function correctPresentation(source, chapters, verified, catalog) {
       const anchors = chapters.map(chapter => source.indexOf(JSON.stringify(chapter.title)));
       const scriptEnd = source.indexOf('</' + 'script>', anchors[anchors.length - 1]);
       if (anchors.some((at, index) => at < 0 || (index > 0 && at <= anchors[index - 1])) || scriptEnd < 0) {
@@ -385,6 +1703,13 @@
           }
         }
       });
+      const payload = JSON.stringify(catalog).replace(/</g, '\\u003c');
+      const boot = `(${startOutputSimulator.toString()})(${payload}, ${simulateCommand.toString()}, new RegExp(${JSON.stringify(commandStart.source)}, ${JSON.stringify(commandStart.flags)}));`;
+      const end = source.lastIndexOf('</body>');
+      if (end < 0 || boot.includes('</' + 'script>')) {
+        throw new Error('Δεν ήταν δυνατή η ασφαλής εγκατάσταση του προσομοιωτή.');
+      }
+      source = source.slice(0, end) + '<script>' + boot + '</' + 'script>' + source.slice(end);
       return source;
     }
 
@@ -416,22 +1741,24 @@
       page.className = 'qa';
       const add = (parent, tag, text) => {
         const element = document.createElement(tag);
-        element.textContent = text;
+        element.textContent = String(text).replace(/[ \t]*\u00b7[ \t]*/g, ', ');
         parent.append(element);
         return element;
       };
-      add(page, 'div', 'ΚΥΒΕΡΝΟΑΣΦΑΛΕΙΑ 101 · ΠΟΙΟΤΙΚΟΣ ΕΛΕΓΧΟΣ').className = 'loading-label';
+      add(page, 'div', 'ΚΥΒΕΡΝΟΑΣΦΑΛΕΙΑ 101, ΠΟΙΟΤΙΚΟΣ ΕΛΕΓΧΟΣ').className = 'loading-label';
       add(page, 'h1', 'Κάθε ερώτηση στο κεφάλαιό της.');
       add(page, 'p', '13 κεφάλαια, 65 ερωτήσεις ανασκόπησης και 78 ερωτήσεις κουίζ. Κάθε σωστή απάντηση συνοδεύεται από αιτιολόγηση.');
+      const link = add(page, 'a', 'Δείτε επίσης τα αποτελέσματα των εντολών');
+      link.href = '?outputs=1';
       chapters.forEach((chapter, ci) => {
         const group = add(page, 'details', '');
-        add(group, 'summary', `${chapter.title} · ${topics[ci]}`);
+        add(group, 'summary', `${chapter.title}, ${topics[ci]}`);
         add(group, 'h2', 'Ενότητες κεφαλαίου');
-        add(group, 'p', chapter.sections.map(section => `${section.id} ${section.title}`).join(' · '));
+        add(group, 'p', chapter.sections.map(section => `${section.id} ${section.title}`).join(', '));
         add(group, 'h2', 'Ερωτήσεις ανασκόπησης');
         const reviewList = add(group, 'ol', '');
         verified[ci].review.forEach(question => add(reviewList, 'li', question));
-        add(group, 'h2', 'Κουίζ · σωστή απάντηση και αιτιολόγηση');
+        add(group, 'h2', 'Κουίζ, σωστή απάντηση και αιτιολόγηση');
         const quizList = add(group, 'ol', '');
         verified[ci].quiz.forEach(item => {
           const question = add(quizList, 'li', item.q);
@@ -442,28 +1769,194 @@
       document.body.append(page);
     }
 
+    function auditExamples(chapters, catalog) {
+      if (catalog.length !== 13) throw new Error('Ο προσομοιωτής δεν καλύπτει και τα 13 κεφάλαια.');
+      catalog.forEach((entry, ci) => {
+        const expectedTasks = chapters[ci].cli.tasks.filter(task => task.cmd?.trim()).length;
+        const expectedBlocks = chapters[ci].lab.phases.reduce((count, phase) =>
+          count + phase.steps.filter(step => step.type === 'code' && step.text?.trim()).length, 0);
+        const tasks = entry.examples.filter(example => example.type === 'cli');
+        const blocks = entry.examples.filter(example => example.type === 'lab');
+        if (tasks.length !== expectedTasks || blocks.length !== expectedBlocks || !tasks.length ||
+            tasks.some((task, index) => task.taskNumber !== index + 1 || !task.title?.trim() ||
+              task.cmd !== chapters[ci].cli.tasks[index].cmd)) {
+          throw new Error(`Λείπουν παραδείγματα εντολών στο κεφάλαιο ${ci + 1}.`);
+        }
+        entry.examples.forEach(example => {
+          const steps = simulateCommand(example.cmd, example);
+          if (!example.lesson?.trim() || !steps.length || steps.some(step =>
+            !step.output?.trim() || !step.explanation?.trim() || !step.invocation?.trim() ||
+            /[\u0370-\u03ff]/u.test(step.output) || /no\s+(?:terminal\s+)?output|no\s+stdout/i.test(step.output) ||
+            step.output.startsWith('$ ') || /^Exit status:\s*\d+$/i.test(step.output) ||
+            (example.type === 'cli' && !example.cmd.split(/\r?\n/).some(line =>
+              line.trim() === step.sourceLine) && example.cmd.trim() !== step.sourceLine) ||
+            !step.details?.length || step.details.some(detail =>
+              !detail.fragment || !step.output.includes(detail.fragment) || !detail.meaning?.trim()))) {
+            console.warn(`Ελέγξτε την ενδεικτική απόκριση: κεφάλαιο ${ci + 1}, ${example.title}.`);
+          }
+        });
+      });
+      const checks = [
+        ['id', /^uid=1000/, /UID_MIN=1000/],
+        ['id -u', /^1000$/, /όχι επίπεδο δικαιωμάτων/],
+        ['ls -l sample.txt', /-rw-r-----/, /6 = 4 .*2/],
+        ['umask', /^0022$/, /0666 & ~0022 = 0644/],
+        ['sha256sum sample.txt', /^185f8db32271fe25/, /256 bits = 64/],
+        ['openssl rand -hex 32', /^[a-f0-9]{64}$/, /32 bytes × 8 = 256 bits/],
+        ['nmap -sV -p 22 lab.example', /22\/tcp\s+open\s+ssh/, /22\/tcp/],
+        ['nmap -sU -p 53 lab.example', /53\/udp\s+open\|filtered/, /open\|filtered/],
+        ['curl -I https://lab.example/api', /^HTTP\/1\.1 200 OK/, /200 σημαίνει/],
+        ['analyst@lab:~$ grep -Ei "Failed password" /var/log/auth.log', /Failed password/, /Η αυθεντικοποίηση απέτυχε/],
+        ['grep -Ei "Failed password" /var/log/auth.log | sort | uniq -c', /^\s+2 .*Failed password/, /uniq -c/],
+        ['grep "error" auth.log', /^Input: auth\.log\nPattern: error\nMatching lines: 0$/, /δεν βρέθηκε γραμμή/],
+        ['chmod 640 sample.txt', /Mode: 0640/, /0640/],
+        ['systemctl start ssh.service', /Unit: ssh\.service\nActiveState: active/, /ssh.service/],
+        ['git add notes.txt', /Index: notes\.txt \(staged\)/, /staged/],
+        ['yara lab.yar sample.bin', /rule LabRule \{[\s\S]*LabRule sample\.bin/, /κανόνα YARA/],
+        ['Get-Service WinDefend', /WinDefend/, /υπηρεσία Microsoft Defender/],
+        ['git status', /^On branch main/, /τρέχουσα τοπική διακλάδωση/]
+      ];
+      for (const [command, expected, lesson] of checks) {
+        const step = simulateCommand(command, { title: 'Self-check' })[0];
+        if (!expected.test(step.output) || !lesson.test(step.details.map(detail => detail.meaning).join(' '))) {
+          console.warn(`Ο έλεγχος προσομοιωμένης εξόδου χρειάζεται διόρθωση: ${command}`);
+        }
+      }
+      const prompted = 'analyst@lab:~$ grep -Ei "Failed password" /var/log/auth.log';
+      const parsed = simulateCommand(prompted, { type: 'cli', title: 'Αποτυχημένες συνδέσεις' })[0];
+      if (parsed.sourceLine !== prompted || !/Failed password/.test(parsed.output)) {
+        console.warn('Ο έλεγχος αντιστοίχισης εντολής με prompt χρειάζεται διόρθωση.');
+      }
+      for (let ci = 0; ci < catalog.length; ci++) {
+        const step = simulateCommand('example_config:\n  enabled: true', {
+          chapterNumber: ci + 1, topic: catalog[ci].topic, context: catalog[ci].title
+        })[0];
+        if (step.kind !== 'summary' || !/Relevant expression: enabled:\s*true/.test(step.output) ||
+            !step.invocation || !step.details.length) {
+          console.warn(`Χρειάζεται έλεγχος του παραδείγματος fallback στο κεφάλαιο ${ci + 1}.`);
+        }
+      }
+    }
+
+    function showOutputAudit(catalog) {
+      document.title = 'Αποτελέσματα εντολών | Κυβερνοασφάλεια 101';
+      document.getElementById('loading').remove();
+      document.body.classList.add('output-page');
+      const page = document.createElement('main');
+      page.className = 'qa qa-output';
+      const add = (parent, tag, text) => {
+        const node = document.createElement(tag);
+        node.textContent = String(text).replace(/[ \t]*\u00b7[ \t]*/g, ', ');
+        parent.append(node);
+        return node;
+      };
+      const masthead = add(page, 'header', '');
+      masthead.className = 'qa-masthead';
+      add(masthead, 'div', 'ΚΥΒΕΡΝΟΑΣΦΑΛΕΙΑ 101 / ΕΚΠΑΙΔΕΥΤΙΚΑ OUTPUTS').className = 'loading-label';
+      add(masthead, 'h1', 'Από την εντολή στο αποτέλεσμά της.');
+      add(masthead, 'p', 'Αγγλικά παραδείγματα output και ελληνικές επεξηγήσεις, οργανωμένα ανά κεφάλαιο και Task.');
+      const back = add(masthead, 'a', 'Επιστροφή στην παρουσίαση  ↗');
+      back.className = 'qa-return';
+      back.href = './index.html';
+      catalog.forEach((chapter, ci) => {
+        const group = add(page, 'details', '');
+        group.className = 'qa-chapter';
+        if (ci === 0) group.open = true;
+        const summary = add(group, 'summary', '');
+        add(summary, 'span', String(ci + 1).padStart(2, '0')).className = 'qa-summary-number';
+        add(summary, 'span', chapter.title.replace(/^\d+\.\s*/, '')).className = 'qa-summary-title';
+        add(summary, 'span', `${chapter.examples.length} παραδείγματα`).className = 'qa-summary-count';
+        const caret = add(summary, 'span', '+');
+        caret.className = 'qa-summary-caret';
+        caret.setAttribute('aria-hidden', 'true');
+        const content = add(group, 'div', '');
+        content.className = 'qa-chapter-content';
+        const tasks = chapter.examples.filter(example => example.type === 'cli');
+        if (tasks.length) {
+          add(content, 'h2', 'Εργαστήριο CLI / Λίστα εργασιών').className = 'qa-section-title';
+          const taskNav = add(content, 'nav', '');
+          taskNav.setAttribute('aria-label', `Tasks κεφαλαίου ${ci + 1}`);
+          const taskList = add(taskNav, 'ol', '');
+          taskList.className = 'qa-task-list';
+          tasks.forEach(task => {
+            const item = add(taskList, 'li', '');
+            const taskLink = add(item, 'a', '');
+            taskLink.href = `#output-task-${ci + 1}-${task.taskNumber}`;
+            taskLink.className = 'qa-task-link';
+            add(taskLink, 'span', `Task ${task.taskNumber}`).className = 'qa-task-number';
+            add(taskLink, 'span', task.title).className = 'qa-task-title';
+            const arrow = add(taskLink, 'span', '↓');
+            arrow.className = 'qa-task-arrow';
+            arrow.setAttribute('aria-hidden', 'true');
+          });
+          add(content, 'h2', 'Εντολές, αποκρίσεις και ερμηνείες').className = 'qa-section-title';
+        }
+        chapter.examples.forEach((example, index) => {
+          if (index === tasks.length && index < chapter.examples.length && tasks.length) {
+            add(content, 'h2', 'Επιπλέον παραδείγματα του κεφαλαίου').className = 'qa-section-title';
+          }
+          const wrap = add(content, 'section', '');
+          wrap.className = 'qa-example';
+          if (example.type === 'cli') wrap.id = `output-task-${ci + 1}-${example.taskNumber}`;
+          add(wrap, 'span', example.type === 'cli' ? `Task ${example.taskNumber}` : `ΠΑΡΑΔΕΙΓΜΑ ${String(index + 1).padStart(2, '0')}`).className = 'qa-example-label';
+          add(wrap, 'h3', example.title);
+          if (example.type !== 'cli') add(wrap, 'p', example.lesson);
+          const steps = simulateCommand(example.cmd, example);
+          steps.forEach((step, si) => {
+            const stepSection = add(wrap, 'div', '');
+            stepSection.className = 'qa-step';
+            add(stepSection, 'div', steps.length > 1 ? `Εντολή ${si + 1}` : 'Εντολή / απόσπασμα').className = 'qa-code-label';
+            add(stepSection, 'pre', step.command).className = 'qa-command';
+            add(stepSection, 'div', 'Τι κάνει και τι σημαίνουν οι παράμετροι').className = 'qa-code-label';
+            add(stepSection, 'p', step.invocation).className = 'qa-explanation';
+            add(stepSection, 'div', step.kind === 'rule'
+              ? 'Ενδεικτικός κανόνας YARA και match (EN)'
+              : step.kind === 'summary' ? 'Ενδεικτική σύνοψη αποτελέσματος (EN)'
+                : step.kind === 'artifact' ? 'Ενδεικτικό παραγόμενο αποτέλεσμα (EN)'
+                  : 'Ενδεικτικό output της εντολής (EN)').className = 'qa-code-label';
+            add(stepSection, 'pre', step.output).className = 'qa-response';
+            add(stepSection, 'h4', 'Πώς διαβάζουμε το αποτέλεσμα').className = 'qa-field-title';
+            const fields = add(stepSection, 'dl', '');
+            fields.className = 'qa-field-list';
+            step.details.forEach(detail => {
+              const row = add(fields, 'div', '');
+              add(row, 'dt', detail.fragment);
+              add(row, 'dd', detail.meaning);
+            });
+          });
+        });
+      });
+      document.body.append(page);
+    }
+
     async function showPresentation() {
       try {
         const chaptersPromise = fetchFirst(chapterSources, text => JSON.parse(text));
-        const isAudit = new URLSearchParams(location.search).get('audit') === '1';
-        const sourcePromise = isAudit ? null : fetchFirst(sources, text => {
+        const params = new URLSearchParams(location.search);
+        const isAudit = params.get('audit') === '1';
+        const isOutputAudit = params.get('outputs') === '1';
+        const sourcePromise = isAudit || isOutputAudit ? null : fetchFirst(sources, text => {
           if (!text.includes('<div id="root"></div>')) throw new Error('Μη αναμενόμενο αρχείο παρουσίασης.');
           return text;
         });
         const [chapters, source] = sourcePromise
           ? await Promise.all([chaptersPromise, sourcePromise])
           : [await chaptersPromise, null];
+        const catalog = buildExampleCatalog(chapters);
+        auditExamples(chapters, catalog);
+        if (isOutputAudit) { showOutputAudit(catalog); return; }
         const verified = auditQuestions(chapters);
-        if (!sourcePromise) { showAudit(chapters, verified); return; }
-        const html = correctPresentation(source, chapters, verified);
+        if (isAudit) { showAudit(chapters, verified); return; }
+        const html = correctPresentation(source, chapters, verified, catalog);
         document.open();
         document.write(html);
         document.close();
       } catch (error) {
-        console.error('Έλεγχος ερωτήσεων:', error);
+        console.error('Έλεγχος περιεχομένου:', error);
         status.textContent = `Δεν ήταν δυνατή η ασφαλής φόρτωση: ${error.message}`;
         sourceLink.classList.add('visible');
         auditLink.classList.add('visible');
+        outputLink.classList.add('visible');
       }
     }
 
