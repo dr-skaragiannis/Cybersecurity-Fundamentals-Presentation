@@ -353,7 +353,7 @@
         blocks: [
           {
             type: 'p',
-            text: `Πέρα από τον έλεγχο ταυτότητας και προνομίων, τα σύγχρονα λειτουργικά συστήματα ενσωματώνουν **μηχανισμούς μετριασμού εκμετάλλευσης** που καταργούν την υπόθεση ότι ο επιτιθέμενος γνωρίζει εκ των προτέρων τη διάταξη της μνήμης. Η **τυχαιοποίηση διάταξης χώρου διευθύνσεων** (Address Space Layout Randomization, **ASLR**) μετατοπίζει σε κάθε εκτέλεση τη θέση του κώδικα, της στοίβας και των βιβλιοθηκών, ώστε μια διεύθυνση που λειτούργησε μία φορά να μην είναι προβλέψιμη. Το **NX/DEP** χαρακτηρίζει σελίδες μνήμης ως μη εκτελέσιμες, εμποδίζοντας την εκτέλεση κώδικα που εγχύθηκε στη στοίβα. Τη **σκλήρυνση συστήματος** (system hardening) συμπληρώνουν η **έγκαιρη ενημέρωση** (patching) κατά γνωστών ευπαθειών και η **ελαχιστοποίηση των υπηρεσιών**: απενεργοποιείται κάθε λογισμικό και δικτυακή υποδοχή που δεν είναι απολύτως αναγκαία, ώστε να μειωθεί η επιφάνεια επίθεσης. Ο κανόνας ισχύει ιδιαίτερα για προνομιακά συστήματα, όπως οι **ελεγκτές τομέα** (Domain Controllers) των Windows, όπου κάθε περιττή υπηρεσία αποτελεί επιπλέον διαδρομή εκμετάλλευσης.`
+            text: `Πέρα από τον έλεγχο ταυτότητας και προνομίων, τα σύγχρονα λειτουργικά συστήματα ενσωματώνουν **μηχανισμούς μετριασμού εκμετάλλευσης** που καταργούν την υπόθεση ότι ο επιτιθέμενος γνωρίζει εκ των προτέρων τη διάταξη της μνήμης. Η **τυχαιοποίηση διάταξης χώρου διευθύνσεων** (Address Space Layout Randomization, **ASLR**) μετατοπίζει σε κάθε εκτέλεση τη θέση του κώδικα, της στοίβας και των βιβλιοθηκών, ώστε μια διεύθυνση που λειτούργησε μία φορά να μην είναι προβλέψιμη. Ο **μη εκτελέσιμος χώρος** (**NX**, No-eXecute) και η **αποτροπή εκτέλεσης δεδομένων** (**DEP**, Data Execution Prevention) χαρακτηρίζουν σελίδες μνήμης ως μη εκτελέσιμες, εμποδίζοντας την εκτέλεση κώδικα που εγχύθηκε στη στοίβα. Τη **σκλήρυνση συστήματος** (system hardening) συμπληρώνουν η **έγκαιρη ενημέρωση** (patching) κατά γνωστών ευπαθειών και η **ελαχιστοποίηση των υπηρεσιών**: απενεργοποιείται κάθε λογισμικό και δικτυακή υποδοχή που δεν είναι απολύτως αναγκαία, ώστε να μειωθεί η επιφάνεια επίθεσης. Ο κανόνας ισχύει ιδιαίτερα για προνομιακά συστήματα, όπως οι **ελεγκτές τομέα** (Domain Controllers) των Windows, όπου κάθε περιττή υπηρεσία αποτελεί επιπλέον διαδρομή εκμετάλλευσης.`
           },
           {
             type: 'callout',
@@ -396,7 +396,7 @@
             type: 'callout',
             kind: 'note',
             title: 'ℹ️ CI/CD: ο αγωγός όπου κρίνεται η ασφάλεια',
-            text: `Το **CI/CD** (Continuous Integration / Continuous Delivery, συνεχής ενοποίηση και παράδοση) είναι η αυτοματοποιημένη ροή που χτίζει, ελέγχει και παραδίδει τον κώδικα. Επειδή κάθε αλλαγή περνά από αυτόν τον αγωγό, αποτελεί ιδανικό σημείο για αυτόματους ελέγχους ασφάλειας: σάρωση εξαρτήσεων, στατικό έλεγχο (SAST), ανίχνευση μυστικών και δοκιμές ασφάλειας που αποτυγχάνουν το χτίσιμο πριν φτάσει η ευπάθεια στην παραγωγή.`
+            text: `Το **CI/CD** (Continuous Integration / Continuous Delivery, συνεχής ενοποίηση και παράδοση) είναι η αυτοματοποιημένη ροή που χτίζει, ελέγχει και παραδίδει τον κώδικα. Επειδή κάθε αλλαγή περνά από αυτόν τον αγωγό, αποτελεί ιδανικό σημείο για αυτόματους ελέγχους ασφάλειας: σάρωση εξαρτήσεων, στατικό έλεγχο ασφάλειας κώδικα (Static Application Security Testing, SAST), ανίχνευση μυστικών και δοκιμές ασφάλειας που αποτυγχάνουν το χτίσιμο πριν φτάσει η ευπάθεια στην παραγωγή.`
           }
         ]
       }],
@@ -1782,6 +1782,119 @@
       throw new Error(`Ατελής λίστα διαφανειών στην ενότητα ${sectionId}.`);
     }
 
+    // Όταν μια συντομογραφία εμφανίζεται για πρώτη φορά στη θεωρία ενός κεφαλαίου, δίπλα της
+    // προστίθενται το πλήρες όνομα και μια σύντομη επεξήγηση. Το "find" είναι το ακρωνύμιο ή
+    // μια σύντομη φράση που αναζητείται στο αρχικό κείμενο (με όρια λέξης).
+    const acronymGlossary = [
+      { find: 'CIA', gloss: 'Confidentiality, Integrity, Availability — εμπιστευτικότητα, ακεραιότητα και διαθεσιμότητα' },
+      { find: 'IDS/IPS', gloss: 'Intrusion Detection / Prevention System — σύστημα ανίχνευσης και αποτροπής εισβολών' },
+      { find: 'MFA', gloss: 'Multi-Factor Authentication — ταυτοποίηση με πολλαπλούς παράγοντες' },
+      { find: 'EDR', gloss: 'Endpoint Detection and Response — ανίχνευση και απόκριση σε τελικά σημεία' },
+      { find: 'XDR', gloss: 'Extended Detection and Response — ενοποιημένη ανίχνευση και απόκριση σε πολλαπλά σημεία' },
+      { find: 'BCP/DR', gloss: 'Business Continuity Plan / Disaster Recovery — σχέδιο επιχειρησιακής συνέχειας και ανάκαμψης από καταστροφές' },
+      { find: 'ARPANET', gloss: 'Advanced Research Projects Agency Network — ο πρόδρομος του Διαδικτύου' },
+      { find: 'ITSEC', gloss: 'Information Technology Security Evaluation Criteria — ευρωπαϊκά κριτήρια αξιολόγησης ασφάλειας' },
+      { find: 'SBOM', gloss: 'Software Bill of Materials — αναλυτική λίστα των συστατικών και εκδόσεων λογισμικού' },
+      { find: 'SMB', gloss: 'Server Message Block — πρωτόκολλο κοινής χρήσης αρχείων και εκτυπωτών' },
+      { find: 'WMI', gloss: 'Windows Management Instrumentation — υποδομή διαχείρισης και αυτοματισμού των Windows' },
+      { find: 'WinRM', gloss: 'Windows Remote Management — πρωτόκολλο απομακρυσμένης διαχείρισης των Windows' },
+      { find: 'RDP', gloss: 'Remote Desktop Protocol — πρωτόκολλο απομακρυσμένης επιφάνειας εργασίας' },
+      { find: 'LSASS', gloss: 'Local Security Authority Subsystem Service — υπηρεσία ταυτοποίησης των Windows' },
+      { find: 'LAPS', gloss: 'Local Administrator Password Solution — διαχείριση των τοπικών κωδικών διαχειριστή' },
+      { find: 'UID / GID', gloss: 'User Identifier / Group Identifier — αναγνωριστικά χρήστη και ομάδας' },
+      { find: 'ATT&CK', gloss: 'Adversarial Tactics, Techniques and Common Knowledge — βάση γνώσης τακτικών και τεχνικών επιτιθέμενων' },
+      { find: 'D3FEND', gloss: 'πλαίσιο αμυντικών τεχνικών του MITRE' },
+      { find: 'DLL', gloss: 'Dynamic Link Library — δυναμικά συνδεδεμένη βιβλιοθήκη των Windows' },
+      { find: 'SPF', gloss: 'Sender Policy Framework — καταγραφή των επιτρεπόμενων διακομιστών αποστολής email' },
+      { find: 'DKIM', gloss: 'DomainKeys Identified Mail — κρυπτογραφική υπογραφή των μηνυμάτων email' },
+      { find: 'DMARC', gloss: 'Domain-based Message Authentication, Reporting and Conformance — πολιτική ελέγχου αυθεντικότητας email' },
+      { find: 'EXIF', gloss: 'Exchangeable Image File Format — μεταδεδομένα που ενσωματώνονται σε εικόνες' },
+      { find: 'FIDO2', gloss: 'Fast Identity Online 2 — πρότυπο ισχυρής ταυτοποίησης ανθεκτικής στο ψάρεμα' },
+      { find: 'TCP/IP', gloss: 'Transmission Control Protocol / Internet Protocol — το θεμελιώδες μοντέλο πρωτοκόλλων του Διαδικτύου' },
+      { find: 'NTP', gloss: 'Network Time Protocol — πρωτόκολλο συγχρονισμού ρολογιών' },
+      { find: 'IRC', gloss: 'Internet Relay Chat — πρωτόκολλο ανταλλαγής μηνυμάτων σε πραγματικό χρόνο' },
+      { find: 'DNSSEC', gloss: 'DNS Security Extensions — κρυπτογραφική επαλήθευση της αυθεντικότητας των απαντήσεων DNS' },
+      { find: 'CAPTCHA', gloss: 'Completely Automated Public Turing test to tell Computers and Humans Apart — δοκιμασία διάκρισης ανθρώπου από αυτοματισμούς' },
+      { find: 'WEP', gloss: 'Wired Equivalent Privacy — παρωχημένο και μη ασφαλές πρωτόκολλο ασφάλειας Wi-Fi' },
+      { find: 'WPA2', gloss: 'Wi-Fi Protected Access 2 — πρωτόκολλο ασφάλειας ασύρματων δικτύων' },
+      { find: 'WPA3', gloss: 'Wi-Fi Protected Access 3 — νεότερη γενιά πρωτοκόλλου ασφάλειας Wi-Fi' },
+      { find: 'SAE', gloss: 'Simultaneous Authentication of Equals — χειραψία του WPA3 ανθεκτική σε μαντεψιές κωδικών' },
+      { find: 'SYN', gloss: 'Synchronize — αίτημα έναρξης σύνδεσης TCP' },
+      { find: 'BCP 38', gloss: 'Best Current Practice 38 — φιλτράρισμα πλαστογραφημένων διευθύνσεων προέλευσης' },
+      { find: 'GCM', gloss: 'Galois/Counter Mode — τρόπος λειτουργίας κρυπτογράφησης με ενσωματωμένη αυθεντικοποίηση' },
+      { find: 'MD5', gloss: 'Message Digest 5 — παρωχημένη συνάρτηση κατακερματισμού χωρίς ασφαλή αντίσταση συγκρούσεων' },
+      { find: 'BLAKE2', gloss: 'σύγχρονη και ασφαλής συνάρτηση κατακερματισμού' },
+      { find: 'HMAC', gloss: 'Hash-based Message Authentication Code — κωδικός αυθεντικοποίησης μηνύματος με μυστικό κλειδί' },
+      { find: 'PSS', gloss: 'Probabilistic Signature Scheme — σχήμα υπογραφής RSA' },
+      { find: 'ECDSA', gloss: 'Elliptic Curve Digital Signature Algorithm — ψηφιακή υπογραφή με ελλειπτικές καμπύλες' },
+      { find: 'CSR', gloss: 'Certificate Signing Request — αίτημα υπογραφής πιστοποιητικού' },
+      { find: 'ACME', gloss: 'Automatic Certificate Management Environment — πρωτόκολλο αυτόματης έκδοσης και ανανέωσης πιστοποιητικών' },
+      { find: 'SAML', gloss: 'Security Assertion Markup Language — πρότυπο ανταλλαγής ισχυρισμών ταυτότητας' },
+      { find: 'OATH', gloss: 'Initiative for Open Authentication — πρότυπα κωδικών μίας χρήσης' },
+      { find: 'OWASP', gloss: 'Open Worldwide Application Security Project — κοινότητα και έργα για την ασφάλεια εφαρμογών' },
+      { find: 'SPDX', gloss: 'Software Package Data Exchange — μορφή αναπαράστασης λίστας υλικών λογισμικού' },
+      { find: 'SAST', gloss: 'Static Application Security Testing — στατικός έλεγχος ασφάλειας του πηγαίου κώδικα' },
+      { find: 'DAST', gloss: 'Dynamic Application Security Testing — δυναμικός έλεγχος ασφάλειας της εκτελούμενης εφαρμογής' },
+      { find: 'CVSS', gloss: 'Common Vulnerability Scoring System — σύστημα βαθμολόγησης της σοβαρότητας ευπαθειών' },
+      { find: 'CISA', gloss: 'Cybersecurity and Infrastructure Security Agency — υπηρεσία κυβερνοασφάλειας των ΗΠΑ' },
+      { find: 'KEV', gloss: 'Known Exploited Vulnerabilities — κατάλογος ευπαθειών που έχουν ήδη εκμεταλλευτεί' },
+      { find: 'ZAP', gloss: 'Zed Attack Proxy — εργαλείο δυναμικών δοκιμών ασφάλειας του OWASP' },
+      { find: 'PTES', gloss: 'Penetration Testing Execution Standard — πρότυπο μεθοδολογίας δοκιμών διείσδυσης' },
+      { find: 'SP 800-115', gloss: 'Special Publication — σειρά τεχνικών εκδόσεων του NIST' },
+      { find: 'NIS2', gloss: 'Network and Information Security Directive 2 — οδηγία της Ευρωπαϊκής Ένωσης για την ασφάλεια δικτύων και πληροφοριακών συστημάτων' },
+      { find: 'OSSEC', gloss: 'Open Source Security — σύστημα ανίχνευσης εισβολών σε κεντρικούς υπολογιστές' },
+      { find: 'IDA', gloss: 'Interactive Disassembler — εργαλείο αποσυμβολισμού και ανάλυσης εκτελέσιμων' },
+      { find: 'CAPE', gloss: 'Config And Payload Extraction — πλατφόρμα ανάλυσης κακόβουλου λογισμικού' },
+      { find: 'WHOIS', gloss: 'πρωτόκολλο ανάκτησης στοιχείων καταχώρισης ονομάτων τομέα και διευθύνσεων IP' },
+      { find: 'NTFS', gloss: 'New Technology File System — σύστημα αρχείων των Windows' },
+      { find: 'LNK', gloss: 'αρχεία συντομεύσεων των Windows' },
+      { find: 'CSF', gloss: 'Cybersecurity Framework — πλαίσιο διαχείρισης κινδύνου κυβερνοασφάλειας του NIST' },
+      { find: 'CIS', gloss: 'Center for Internet Security — οργανισμός με σημεία αναφοράς ασφαλούς ρύθμισης' },
+      { find: 'FAIR', gloss: 'Factor Analysis of Information Risk — ποσοτικό μοντέλο εκτίμησης κινδύνου' },
+      { find: 'HIPAA', gloss: 'Health Insurance Portability and Accountability Act — νόμος των ΗΠΑ για την προστασία δεδομένων υγείας' },
+      { find: 'SCADA', gloss: 'Supervisory Control and Data Acquisition — συστήματα εποπτικού ελέγχου και συλλογής δεδομένων' },
+      { find: 'ISA/IEC', gloss: 'International Society of Automation / International Electrotechnical Commission — φορείς τυποποίησης' }
+    ];
+
+    // Ένα ακρωνύμιο θεωρείται ήδη επεξηγημένο όταν δίπλα του υπάρχει λατινικό πολυλεκτικό όνομα.
+    function acronymExplained(before, after) {
+      const multi = text => /[A-Z][a-z]+(?:[-\s]+[A-Za-z][a-z]+)+/.test(text);
+      const open = before.lastIndexOf('(');
+      const close = before.lastIndexOf(')');
+      if (open > close && (multi(before.slice(0, open)) || multi(before.slice(open + 1)))) return true;
+      const tail = after.replace(/^[*_\s]+/, '');
+      if (tail.startsWith('(')) {
+        const end = tail.indexOf(')');
+        if (end > 1 && multi(tail.slice(1, end))) return true;
+      }
+      return /^[,–—-]\s*[A-Z][a-z]+(?:[-\s]+[A-Za-z][a-z]+)+/.test(tail);
+    }
+
+    function acronymInsideCode(source, pos, length) {
+      const count = text => (text.match(/`/g) || []).length;
+      return count(source.slice(Math.max(0, pos - 70), pos)) % 2 === 1
+        || count(source.slice(pos + length, pos + length + 70)) % 2 === 1;
+    }
+
+    // Όρια λέξης χωρίς regex lookbehind, για συμβατότητα με παλαιότερους περιηγητές.
+    const acronymBoundary = /[A-Za-z0-9/]/;
+
+    function firstAcronymMention(source, from, to, entry) {
+      const re = new RegExp(entry.find.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+      const window = source.slice(from, to);
+      let match;
+      while ((match = re.exec(window)) !== null) {
+        const pos = from + match.index;
+        if (acronymBoundary.test(source[pos - 1] || '') || acronymBoundary.test(source[pos + match[0].length] || '')) continue;
+        const before = source.slice(Math.max(0, pos - 160), pos);
+        const after = source.slice(pos + match[0].length, pos + match[0].length + 90);
+        if (acronymExplained(before, after)) return { expanded: true };
+        if (acronymInsideCode(source, pos, match[0].length)) continue;
+        return { pos, length: match[0].length };
+      }
+      return null;
+    }
+
     function correctPresentation(source, chapters, verified, catalog) {
       const anchors = chapters.map(chapter => source.indexOf(JSON.stringify(chapter.title)));
       const scriptEnd = source.indexOf('</' + 'script>', anchors[anchors.length - 1]);
@@ -1808,9 +1921,22 @@
       edits.sort((a, b) => b.start - a.start);
       for (const edit of edits) source = source.slice(0, edit.start) + edit.value + source.slice(edit.end);
       const patchedAnchors = chapters.map(chapter => source.indexOf(JSON.stringify(chapter.title)));
+      const acronymEdits = [];
+      const settledAcronyms = new Set();
       chapters.forEach((chapter, ci) => {
         const from = patchedAnchors[ci] + JSON.stringify(chapter.title).length;
         const to = patchedAnchors[ci + 1] ?? source.indexOf('</' + 'script>', from);
+        const theoryEnd = questionArraySpan(source, from, to, 'review').start;
+        for (const entry of acronymGlossary) {
+          if (settledAcronyms.has(entry.find)) continue;
+          const mention = firstAcronymMention(source, from, theoryEnd, entry);
+          if (!mention) continue;
+          settledAcronyms.add(entry.find);
+          if (mention.expanded) continue;
+          let at = mention.pos + mention.length;
+          while (source[at] === '*' || source[at] === '_') at++;
+          acronymEdits.push({ start: at, end: at, value: ' (' + entry.gloss + ')', find: entry.find, gloss: entry.gloss });
+        }
         for (const key of ['review', 'quiz']) {
           const span = questionArraySpan(source, from, to, key);
           if (source.slice(span.start, span.end) !== JSON.stringify(verified[ci][key])) {
@@ -1825,6 +1951,15 @@
           }
         }
       });
+      acronymEdits.sort((a, b) => b.start - a.start);
+      for (const edit of acronymEdits) {
+        source = source.slice(0, edit.start) + edit.value.replace(/</g, '\\u003c') + source.slice(edit.end);
+      }
+      for (const edit of acronymEdits) {
+        if (!source.includes('(' + edit.gloss + ')')) {
+          throw new Error(`Απέτυχε η επεξήγηση της συντομογραφίας ${edit.find}.`);
+        }
+      }
       const payload = JSON.stringify(catalog).replace(/</g, '\\u003c');
       const boot = `(${startOutputSimulator.toString()})(${payload}, ${simulateCommand.toString()}, new RegExp(${JSON.stringify(commandStart.source)}, ${JSON.stringify(commandStart.flags)}));`;
       const end = source.lastIndexOf('</body>');
